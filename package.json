@@ -1,5 +1,8 @@
 {
-  "name": "avocado-component-library",
+  "name": "@dyazdani/avocado-component-library",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/dyazdani"
+  },
   "private": true,
   "version": "0.0.1",
   "type": "module",
