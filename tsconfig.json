@@ -26,6 +26,6 @@
     "forceConsistentCasingInFileNames": true,
     "emitDeclarationOnly": true
   },
-  "include": ["src", "rollup.config.js"],
+  "include": ["src", "rollup.config.mjs"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
