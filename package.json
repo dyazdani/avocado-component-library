@@ -1,18 +1,22 @@
 {
   "name": "avocado-component-library",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "rollup": "rollup -c"
   },
   "dependencies": {
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.1.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-typescript": "^11.1.0",
     "@types/react": "^18.2.2",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
@@ -22,15 +26,22 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
     "react": "^18.2.0",
+    "rollup": "^3.21.4",
+    "rollup-plugin-dts": "^5.3.0",
     "typescript": "^5.0.4",
     "vite": "^4.3.2"
   },
-  "main": "index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dyazdani/avocado-component-library.git"
   },
-  "author": "",
+  "author": "dyazdani",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/dyazdani/avocado-component-library/issues"
