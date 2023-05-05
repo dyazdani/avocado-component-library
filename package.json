@@ -66,5 +66,8 @@
     "url": "https://github.com/dyazdani/avocado-component-library/issues"
   },
   "homepage": "https://github.com/dyazdani/avocado-component-library#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@storybook/addon-a11y": "^7.0.9"
+  }
 }
