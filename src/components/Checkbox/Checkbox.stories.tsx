@@ -1,37 +1,21 @@
-import React from 'react';
-import Checkbox, { CheckboxProps } from './Checkbox';
+import type { Meta, StoryObj } from '@storybook/react';
+import Checkbox from './Checkbox';
 
-export default {
-  component: Checkbox,
-  title: 'Checkbox',
-};
+const meta: Meta<typeof Checkbox> = {
+    title: 'Checkbox',
+    component: Checkbox,
+}
 
-const Template = (args: CheckboxProps) => <Checkbox {...args} />;
+export default meta;
+type Story = StoryObj<typeof Checkbox>;
 
-export const Unchecked = Template.bind({});
-Unchecked.args = {
-    label: 'Test Checkbox',
-    id: '1',
-    name: "name",
-    value: "value",
-    state: 'UNCHECKED',
-};
 
-export const Checked = Template.bind({});
-Checked.args = {
-    ...Unchecked.args,
-    state: 'CHECKED',
-};
-
-export const UncheckedDisabled = Template.bind({});
-UncheckedDisabled.args = {
-    ...Unchecked.args,
-    state: 'UNCHECKED_DISABLED',
-
-};
-
-export const CheckedDisabled = Template.bind({});
-CheckedDisabled.args = {
-    ...Unchecked.args,
-    state: 'CHECKED_DISABLED',
-};
+export const Primary: Story = {
+    args: {
+        label: "Add label text",
+        id: "avocado-checkbox",
+        checked: false,
+        disabled: false,
+        name: "avocado-checkbox",
+    }
+}

@@ -1,24 +1,23 @@
 import React from "react";
 
 export interface CheckboxProps {
-  label: string;
-  id: string;
-  state: string;
-  name: string;
-  value: string;
+  label: string
+  id: string
+  checked: boolean
+  disabled: boolean
+  name: string
 }
 
-const Checkbox = ({label, id, state, name, value}: CheckboxProps) => {
+const Checkbox = ({label, id, name, checked, disabled}: CheckboxProps) => {
   return (
-    <div className={`checkbox ${state}`}>
+    <div className={`avocado-checkbox`}>
         <input 
         type="checkbox" 
         name={name} 
-        value={value} 
         id={id} 
         tabIndex={0} 
-        checked={state === 'CHECKED' || state === 'CHECKED_DISABLED'}
-        disabled={state === 'CHECKED_DISABLED' || state === 'UNCHECKED_DISABLED'}
+        checked={checked}
+        disabled={disabled}
         />
         <label htmlFor={id}>{label}</label>;
      </div>
