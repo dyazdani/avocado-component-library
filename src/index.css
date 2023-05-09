@@ -79,7 +79,7 @@ button:focus-visible {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #89c954;
+  color: #84bb2a;
   font-family: 'Ruda', sans-serif;
   font-weight: 600;
 }
@@ -108,12 +108,12 @@ button:focus-visible {
 }
 
 .avocado-checkbox span:hover {
-  background-color: #e5f6b4;  
+  background-color: #a9d04e;  
 }
 
 /* When the checkbox is checked, add keep inside avocado background */
 .avocado-checkbox input:checked ~ span {
-  background-color: #e5f6b4;
+  background-color: #a9d04e;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
