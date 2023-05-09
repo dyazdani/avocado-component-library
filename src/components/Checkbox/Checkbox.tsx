@@ -10,17 +10,17 @@ export interface CheckboxProps {
 
 const Checkbox = ({label, id, name, checked, disabled}: CheckboxProps) => {
   return (
-    <div className={`avocado-checkbox`}>
-        <input 
-        type="checkbox" 
-        name={name} 
-        id={id} 
-        tabIndex={0} 
-        checked={checked}
-        disabled={disabled}
-        />
-        <label htmlFor={id}>{label}</label>;
-     </div>
+        <label className="avocado-checkbox" htmlFor={id}>{label}
+          <input 
+          type="checkbox" 
+          name={name} 
+          id={id} 
+          tabIndex={0} 
+          checked={checked}
+          disabled={disabled}
+          />
+          <span></span>
+        </label>
   )
 };
 

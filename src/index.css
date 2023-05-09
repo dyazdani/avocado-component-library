@@ -69,5 +69,74 @@ button:focus-visible {
 }
 
 .avocado-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   color: #89c954;
+  font-family: 'Ruda', sans-serif;
+  font-weight: 600;
+}
+
+.avocado-checkbox input {
+  margin-right: 7px;
+  background: #89c954;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  line-height: 2rem;
+}
+
+.avocado-checkbox span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 28px;
+  width: 20px;
+  background-color: #211711;
+  display: block;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  border: 2px solid #211711;
+}
+
+.avocado-checkbox span:hover {
+  background-color: #e5f6b4;  
+}
+
+/* When the checkbox is checked, add keep inside avocado background */
+.avocado-checkbox input:checked ~ span {
+  background-color: #e5f6b4;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.avocado-checkbox span:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.avocado-checkbox input:checked ~ span:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.avocado-checkbox span:after {
+  left: 8px;
+  top: 7px;
+  width: 4px;
+  height: 8.5px;
+  border: solid #74332c;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
