@@ -71,9 +71,9 @@ button:focus-visible {
 .avocado-checkbox {
   display: block;
   position: relative;
+  width: fit-content;  
   padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
+  margin: 5px;  cursor: pointer;
   font-size: 22px;
   -webkit-user-select: none;
   -moz-user-select: none;
