@@ -79,20 +79,21 @@ button:focus-visible {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #84bb2a;
+  color: #a9d04e;
   font-family: 'Ruda', sans-serif;
   font-weight: 600;
 }
 
 .avocado-checkbox input {
-  margin-right: 7px;
-  background: #89c954;
-  position: absolute;
+  /* margin-right: 7px; */
+  /* background: #89c954; */
+  /* position: absolute;
   opacity: 0;
   cursor: pointer;
   height: 0;
   width: 0;
-  line-height: 2rem;
+  line-height: 2rem; */
+  display: none;
 }
 
 .avocado-checkbox span {
@@ -101,7 +102,7 @@ button:focus-visible {
   left: 0;
   height: 28px;
   width: 20px;
-  background-color: #211711;
+  background-color: #d1e063;
   display: block;
   border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
   border: 2px solid #211711;
@@ -109,6 +110,10 @@ button:focus-visible {
 
 .avocado-checkbox span:hover {
   background-color: #a9d04e;  
+}
+
+.avocado-checkbox input:disabled ~ span {
+  background-color: #211711;
 }
 
 /* When the checkbox is checked, add keep inside avocado background */
@@ -140,3 +145,4 @@ button:focus-visible {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
