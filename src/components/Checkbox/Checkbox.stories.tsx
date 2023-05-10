@@ -14,7 +14,6 @@ export const Primary: Story = {
     args: {
         label: "Add label text",
         id: "avocado-checkbox",
-        checked: false,
         disabled: false,
         name: "avocado-checkbox",
     }
