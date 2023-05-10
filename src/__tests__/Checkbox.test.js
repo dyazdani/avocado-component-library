@@ -39,3 +39,30 @@ describe("checkbox renders", () => {
         expect(label).toBeDefined();
     })
 })
+
+    test("checkbox renders disabled correctly", () => {
+        render(<Checkbox 
+                name="avocado-checkbox" 
+                id="avocado-checkbox" 
+                label="avocado checkbox"
+                checked={false}
+                disabled={true}
+                />);
+        const input = screen.getByLabelText("avocado checkbox");
+        expect(input).toBeDisabled();
+    })
+
+        test("checking input works", async () => {
+            const user = userEvent.setup();
+            render(<Checkbox 
+                name="avocado-checkbox" 
+                id="avocado-checkbox" 
+                label="avocado checkbox"
+                checked={false}
+                disabled={false}
+                />);
+        const input = screen.getByLabelText("avocado checkbox");
+        await user.click(input);
+        expect(input).toBeChecked();
+    })
+ 

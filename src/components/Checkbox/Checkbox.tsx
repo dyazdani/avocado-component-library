@@ -16,7 +16,7 @@ const Checkbox = ({label, id, name, checked, disabled}: CheckboxProps) => {
           name={name} 
           id={id} 
           tabIndex={0} 
-          checked={checked}
+          defaultChecked={checked}
           disabled={disabled}
         />
         <label htmlFor={id}>{label}</label>
