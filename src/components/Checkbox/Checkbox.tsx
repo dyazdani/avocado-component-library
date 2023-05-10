@@ -1,6 +1,8 @@
 import React from "react";
 import { ThemeContext } from "../Contexts";
 import { useState } from "react";
+import InputCheckbox from "../InputCheckbox/InputCheckbox";
+import Label from "../Label/Label";
 
 export interface CheckboxProps {
   label: string
@@ -10,24 +12,16 @@ export interface CheckboxProps {
 }
 
 const Checkbox = ({label, id, name, disabled}: CheckboxProps) => {
-    const [theme, setTheme] = useState('light');
-    const [checked, setChecked] = useState<boolean>(false);
+  const [theme, setTheme] = useState('light');
   return (
     <ThemeContext.Provider value={theme}>
       <div className="avocado-checkbox" data-testid="avocado-checkbox">
-      <input
-        className={theme}
-        type="checkbox" 
-        name={name} 
-        id={id} 
-        tabIndex={0} 
-        //TODO: Figure out how to make checked attribute appear in html
-        // and work both in testing and in Storybook
-        checked={checked}
-        onChange={() => setChecked(!checked)}
-        disabled={disabled}
-      />
-      <label htmlFor={id} className={theme}>{label}</label>
+        <InputCheckbox
+          name={name} 
+          id={id}
+          disabled={disabled}
+        />
+      <Label htmlFor={id} className={theme}>{label}</Label>
       </div>
     </ThemeContext.Provider>
   )
