@@ -18,3 +18,13 @@ export const Primary: Story = {
         name: "avocado-checkbox",
     }
 }
+
+export const Secondary: Story = {
+    args: {
+        label: "Add label text",
+        id: "avocado-checkbox",
+        disabled: false,
+        name: "avocado-checkbox",
+
+    }
+}
