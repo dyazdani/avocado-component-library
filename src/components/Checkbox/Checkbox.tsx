@@ -1,4 +1,6 @@
 import React from "react";
+import { ThemeContext } from "../Contexts";
+import { useState } from "react";
 
 export interface CheckboxProps {
   label: string
@@ -9,18 +11,22 @@ export interface CheckboxProps {
 }
 
 const Checkbox = ({label, id, name, checked, disabled}: CheckboxProps) => {
+    const [theme, setTheme] = useState('light');
   return (
-        <div className="avocado-checkbox" data-testid="avocado-checkbox">
-        <input
-          type="checkbox" 
-          name={name} 
-          id={id} 
-          tabIndex={0} 
-          defaultChecked={checked}
-          disabled={disabled}
-        />
-        <label htmlFor={id}>{label}</label>
-        </div>
+    <ThemeContext.Provider value={theme}>
+      <div className="avocado-checkbox" data-testid="avocado-checkbox">
+      <input
+        className={theme}
+        type="checkbox" 
+        name={name} 
+        id={id} 
+        tabIndex={0} 
+        defaultChecked={checked}
+        disabled={disabled}
+      />
+      <label htmlFor={id} className={theme}>{label}</label>
+      </div>
+    </ThemeContext.Provider>
   )
 };
 
