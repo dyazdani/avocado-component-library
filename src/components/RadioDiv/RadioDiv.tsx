@@ -16,6 +16,7 @@ const RadioDiv = ({id, name, label, value}: RadioDivProps) => {
           name={name} 
           id={id}
           value={value}
+          data-testid="avocado-radio-div"
         />
         <Label id={id} label={label}/>
       </div>
