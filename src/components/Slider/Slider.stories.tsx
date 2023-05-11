@@ -12,6 +12,10 @@ type Story = StoryObj<typeof Slider>;
 
 export const Primary: Story = {
     args: {
-        
+        id: "avocado-slider",
+        name: "avocado-slider",
+        min: 1,
+        max: 100,
+        step: 1,
     }
 }

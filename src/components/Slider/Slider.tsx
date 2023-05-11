@@ -1,14 +1,23 @@
 import React from "react";
-import { ThemeContext } from "../Contexts";
-import { useState } from "react";
 
 export interface SliderProps {
-  
+  id: string
+  name: string
+  min: number
+  max: number
+  step: number
 }
 
-const Slider = ({}: SliderProps) => {
+const Slider = ({id, name, min, max, step}: SliderProps) => {
   return (
-      
+      <input 
+        type="range"  
+        id={id}
+        name={name}
+        min={min}
+        max={max}
+        step={step}
+      />
   )
 };
 
