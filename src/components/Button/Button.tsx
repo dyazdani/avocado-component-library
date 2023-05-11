@@ -15,6 +15,7 @@ const Button = ({id, name, type, disabled, buttonText}: ButtonProps) => {
         name={name}
         type={type}
         disabled={disabled}
+        data-testid="avocado-button"
       >{buttonText}</button>
   )
 };
