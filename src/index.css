@@ -134,6 +134,7 @@ button:focus-visible {
   cursor: default;
 }
 
+/* TODO: Figure out how to apply styles to context used in components to create Dark theme */ 
 .dark {
   color: #a9d04e;
 }

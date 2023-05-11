@@ -12,7 +12,7 @@ export interface CheckboxProps {
 }
 
 const Checkbox = ({label, id, name, disabled}: CheckboxProps) => {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
   return (
     <ThemeContext.Provider value={theme}>
       <div className="avocado-checkbox" data-testid="avocado-checkbox">
