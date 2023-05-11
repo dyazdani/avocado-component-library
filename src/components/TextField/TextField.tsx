@@ -7,7 +7,7 @@ const TextField = ({id, name, placeholder}: TextFieldDivProps ) => {
   return (
           <input
             type="text"
-            data-testid="avocado-textfield"
+            data-testid="avocado-text-field"
             placeholder={placeholder}
             id={id}
             name={name}
