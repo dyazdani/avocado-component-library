@@ -1,11 +1,16 @@
 import React from "react";
+import { RadioDivProps } from "../RadioDiv/RadioDiv";
 
 
-const InputRadio = () => {
+const InputRadio = ({name, id, value}: RadioDivProps) => {
   
   return (
           <input
-            type="radio" 
+            type="radio"
+            name={name}
+            id={id} 
+            value={value}
+            data-testid="avocado-input-radio"
           />
         )
 };
