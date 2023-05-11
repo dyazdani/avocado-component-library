@@ -17,6 +17,7 @@ const Slider = ({id, name, min, max, step}: SliderProps) => {
         min={min}
         max={max}
         step={step}
+        data-testid="avocado-slider"
       />
   )
 };
