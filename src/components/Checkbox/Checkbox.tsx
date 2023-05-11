@@ -7,8 +7,8 @@ import Label from "../Label/Label";
 export interface CheckboxProps {
   label: string
   id: string
-  disabled: boolean
   name: string
+  disabled: boolean
 }
 
 const Checkbox = ({label, id, name, disabled}: CheckboxProps) => {
@@ -21,7 +21,7 @@ const Checkbox = ({label, id, name, disabled}: CheckboxProps) => {
           id={id}
           disabled={disabled}
         />
-      <Label htmlFor={id} className={theme}>{label}</Label>
+        <Label id={id} label={label}/>
       </div>
     </ThemeContext.Provider>
   )
