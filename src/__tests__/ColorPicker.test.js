@@ -10,3 +10,11 @@ test("renders", () => {
     const colorPicker = screen.getByTestId("avocado-color-picker");
     expect(colorPicker).toBeInTheDocument();
 })
+
+//TODO: Make the test below work
+// test("color changes", () => {
+//     render(<ColorPicker 
+//             />);
+//     const colorPicker = screen.getByTestId("avocado-color-picker");
+//     expect(colorPicker).toBeInTheDocument();
+// })
