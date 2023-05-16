@@ -11,7 +11,6 @@ const SelectOption = ({value}: SelectOptionProps) => {
   return (
           <option
             value={value} 
-            name={value}
             data-testid="avocado-select-option-{value}">{value}
           </option>
         )
