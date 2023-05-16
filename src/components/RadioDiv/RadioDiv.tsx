@@ -11,7 +11,7 @@ export interface RadioDivProps {
 
 const RadioDiv = ({id, name, label, value}: RadioDivProps) => {
   return (
-      <div data-testid="avocado-radio-div">
+      <div data-testid={`avocado-radio-div-${id}`}>
         <InputRadio
           name={name} 
           id={id}

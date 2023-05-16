@@ -2,7 +2,7 @@ import React from "react";
 import RadioDiv from "../RadioDiv/RadioDiv";
 
 export interface RadioDivProps {
-  name: string
+name: string
   legend: string
   idOne: string
   labelOne: string
@@ -20,35 +20,32 @@ const RadioGroup = ({
   legend, 
   idOne, 
   labelOne, 
-  valueOne,  
   idTwo, 
   labelTwo, 
-  valueTwo, 
   idThree, 
-  labelThree, 
-  valueThree}: RadioDivProps) => {
+  labelThree}: RadioDivProps) => {
   return (
-      <fieldset data-testid="radio-group">
-        <legend>
+      <fieldset data-testid="avocado-radio-group">
+        <legend data-testid='radio-legend'>
           {legend}
         </legend>
         <RadioDiv 
           id={idOne}
           name={name}
           label={labelOne}
-          value={valueOne}
+          value={idOne}
         />
         <RadioDiv 
           id={idTwo}
           name={name}
           label={labelTwo}
-          value={valueTwo}
+          value={idTwo}
         />
         <RadioDiv 
           id={idThree}
           name={name}
           label={labelThree}
-          value={valueThree}
+          value={idThree}
         />
       </fieldset>
   )
