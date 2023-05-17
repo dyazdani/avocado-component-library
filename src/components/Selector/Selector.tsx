@@ -1,14 +1,15 @@
 import React from "react";
-import { ThemeContext } from "../Contexts";
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import SelectOption from "../SelectOption/SelectOption";
 import {SelectorDivProps} from "../SelectorDiv/SelectorDiv"
+import { ThemeContext } from "../ThemeContext";
 
 
 const Selector = ({name, id, valueOne, valueTwo, valueThree}: SelectorDivProps) => {
-  
+  const theme = useContext(ThemeContext);
   return (
           <select
+            className={'avocado-selector-' + theme}
             name={name}
             id={id}
             data-testid="avocado-selector">

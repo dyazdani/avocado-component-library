@@ -1,7 +1,7 @@
 import React from "react";
 import InputCheckbox from "../InputCheckbox/InputCheckbox";
 import Label from "../Label/Label";
-import { ThemeContext } from "../Contexts";
+import { ThemeContext } from "../ThemeContext";
 import { useContext } from "react";
 
 export interface CheckboxProps {

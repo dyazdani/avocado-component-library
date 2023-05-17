@@ -1,6 +1,6 @@
 import React from "react";
 import { useContext } from "react";
-import { ThemeContext } from "../Contexts";
+import { ThemeContext } from "../ThemeContext";
 import { CheckboxProps } from "../Checkbox/Checkbox";
 
 
