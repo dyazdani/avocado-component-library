@@ -1,19 +1,15 @@
-import { createContext, useState} from 'react';
+import { useState} from 'react';
 import React from 'react';
-import Checkbox from '../Checkbox/Checkbox';
+import { ThemeContext } from '../ThemeContext';
 
-const ThemeContext = createContext('light');
+type themes = 'light' | 'dark'
 
-interface ThemeProviderProps {
-    label: string
-}
-
-export default function ThemeProvider({ label }: ThemeProviderProps) {
-    const [theme, setTheme] = useState<string>('light');
+export default function ThemeProvider({ children }) {
+    const [theme, setTheme] = useState<themes>('light');
+    
     return (
-    <ThemeContext.Provider value={theme}>
-      <Checkbox 
-      label={label}/>
+    <ThemeContext.Provider value={{theme, setTheme}}>
+        {children}
     </ThemeContext.Provider>
   )
 }
