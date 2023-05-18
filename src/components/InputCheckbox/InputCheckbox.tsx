@@ -10,7 +10,7 @@ const InputCheckbox = ({id, name, disabled}: CheckboxProps) => {
   
   return (
           <input
-            className={'input-checkbox-' + theme}
+            className={`avocado-input-checkbox ${theme}`}
             type="checkbox" 
             name={name} 
             id={id} 

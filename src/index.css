@@ -51,12 +51,12 @@ h1 {
   }
 } */
 
-.avocado-checkbox-light {
+.avocado-checkbox {
   display: flex;
   flex-flow: row nowrap;
 }
 
-.avocado-checkbox-light label {
+.avocado-label {
   /* appearance: none; */
   display: inline-block;
   width: fit-content;  
@@ -74,7 +74,7 @@ h1 {
 }
 
 
-.avocado-checkbox-light input {
+.avocado-input-checkbox {
   margin-right: 7px;
   background: #89c954;
   cursor: pointer;
@@ -89,12 +89,12 @@ h1 {
 }
 
 /* When the checkbox is checked, add inside avocado background */
-.avocado-checkbox-light input:checked {
+.avocado-checkbox input:checked {
   background-color: #a9d04e;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
-.avocado-checkbox-light input:checked::after {
+.avocado-checkbox input:checked::after {
   content: "";
   position: absolute;
   left: 29px;
@@ -108,12 +108,12 @@ h1 {
   transform: rotate(45deg);
 }
 
-.avocado-checkbox-light input:disabled {
+.avocado-checkbox input:disabled {
   background-color: #211711;
 }
 
-.avocado-checkbox-light input:disabled, 
-.avocado-checkbox-light input:disabled + label {
+.avocado-checkbox input:disabled, 
+.avocado-checkbox input:disabled + label {
   cursor: default;
 }
 

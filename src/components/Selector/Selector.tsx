@@ -9,7 +9,7 @@ const Selector = ({name, id, valueOne, valueTwo, valueThree}: SelectorDivProps) 
   const theme = useContext(ThemeContext);
   return (
           <select
-            className={'avocado-selector-' + theme}
+            className={`avocado-selector ${theme}`}
             name={name}
             id={id}
             data-testid="avocado-selector">
