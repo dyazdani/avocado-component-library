@@ -4,6 +4,8 @@
   font-weight: 600;
 }
 
+/****---BUTTON STYLES---****/
+
 button {
   display: inline-block;
   font-family: inherit;
@@ -38,7 +40,21 @@ button:active {
   transform: scale(0.99);
 }
 
-/*--------------------******STYLES FOR LIGHT (DEFAULT) AND DARK THEMES******----------------------*/
+/****---LABEL STYLES---****/
+
+label {
+  display: inline-block;
+  width: fit-content;  
+  margin: 5px;  
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/*************************----------STYLES FOR LIGHT (DEFAULT) AND DARK THEMES-----------**********************/
 .light {
   color: #211711;
 }
@@ -47,20 +63,7 @@ button:active {
   color: #a9d04e;
 }
 
-.avocado-label {
-  /* appearance: none; */
-  display: inline-block;
-  width: fit-content;  
-  /* padding-left: 35px; */
-  margin: 5px;  
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-weight: 600;
-}
+/*************************************----------COMPONENT STYLES-----------************************************/
 
 .avocado-checkbox {
   display: flex;
