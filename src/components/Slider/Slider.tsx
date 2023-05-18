@@ -1,4 +1,6 @@
 import React from "react";
+import { useContext } from "react";
+import { ThemeContext } from "../ThemeContext";
 
 export interface SliderProps {
   id: string
@@ -9,8 +11,11 @@ export interface SliderProps {
 }
 
 const Slider = ({id, name, min, max, step}: SliderProps) => {
+  const theme = useContext(ThemeContext)
+
   return (
       <input 
+        className={`avocado-slider ${theme}`}
         type="range"  
         id={id}
         name={name}

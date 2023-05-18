@@ -1,4 +1,6 @@
 import React from "react";
+import { useContext } from "react";
+import { ThemeContext } from "../ThemeContext";
 
 interface NumberSelectorProps {
   name: string
@@ -11,10 +13,12 @@ interface NumberSelectorProps {
 
 
 const NumberSelector = ({name, id, min, max, step, placeholder}: NumberSelectorProps) => {
-  
+  const theme = useContext(ThemeContext)
+
   return (
           <input
-            type="number"
+          className={`avocado-number-selector ${theme}`}
+          type="number"
             name={name}
             id={id}
             min={min}

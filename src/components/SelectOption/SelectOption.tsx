@@ -10,7 +10,7 @@ const SelectOption = ({value}: SelectOptionProps) => {
   const theme = useContext(ThemeContext);
   return (
           <option
-            className={"avocado-select-option-" + theme}
+            className={`avocado-select-option ${theme}`}
             value={value} 
             data-testid="avocado-select-option-{value}">{value}
           </option>
