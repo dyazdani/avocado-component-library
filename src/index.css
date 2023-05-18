@@ -1,6 +1,10 @@
-.avocado-checkbox {
-  display: flex;
-  flex-flow: row nowrap;
+/*--------------------******STYLES FOR LIGHT (DEFAULT) AND DARK THEMES******----------------------*/
+.light {
+  color: #211711;
+}
+
+.dark {
+  color: #a9d04e;
 }
 
 .avocado-label {
@@ -15,11 +19,14 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #211711;
   font-family: 'Ruda', sans-serif;
   font-weight: 600;
 }
 
+.avocado-checkbox {
+  display: flex;
+  flex-flow: row nowrap;
+}
 
 .avocado-input-checkbox {
   margin-right: 7px;
@@ -62,9 +69,4 @@
 .avocado-checkbox input:disabled, 
 .avocado-checkbox input:disabled + label {
   cursor: default;
-}
-
-/* TODO: Figure out how to apply styles to context used in components to create Dark theme */ 
-.dark {
-  color: #a9d04e;
 }
