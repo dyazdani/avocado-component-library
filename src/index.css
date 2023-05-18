@@ -1,6 +1,7 @@
 /*------------------------------------******GLOBAL STYLES******------------------------------------*/
 :root {
   font-family: 'Ruda', sans-serif;
+  font-weight; 600;
 }
 
 button {
@@ -12,9 +13,8 @@ button {
   margin: 0;
   text-decoration: none;
   background: #a9d04e;
-  box-shadow: .1rem .1rem .1rem .1rem; 
-  font-weight: 600;
-  border-radius: 5px;
+  box-shadow: .1rem .1rem .1rem .1rem #211711; 
+  border-radius: 10px;
   cursor: pointer;
   text-align: center;
   transition: background 250ms ease-in-out, 
