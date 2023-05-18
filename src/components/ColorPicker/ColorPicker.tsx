@@ -9,7 +9,7 @@ interface ColorPickerProps {
 
 
 const ColorPicker = ({name, id}: ColorPickerProps) => {
-  const [color, setColor] = useState(null);
+  const [color, setColor] = useState('#74332c');
   const theme = useContext(ThemeContext)
 
   return (

@@ -65,6 +65,7 @@ label {
 
 /*************************************----------COMPONENT STYLES-----------************************************/
 
+/****---CHECKBOX STYLES---****/
 .avocado-checkbox {
   display: flex;
   flex-flow: row nowrap;
@@ -115,4 +116,15 @@ border-color: #506308;
 .avocado-checkbox input:disabled, 
 .avocado-checkbox input:disabled + label {
   cursor: default;
+}
+
+/****---COLOR PICKER STYLES---****/
+
+.avocado-color-picker {
+  overflow: hidden;
+  padding: 0;
+  display: inline-block;
+  border-radius: 7px;
+  border: 2px solid #211711;
+  background-color: #a9d04e;
 }
