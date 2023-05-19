@@ -262,7 +262,6 @@ border-color: #211711;
 .avocado-selector.dark {
   border: 2px solid #211711;
   outline: 1px solid #506308;
-
 }
 
 .avocado-selector:focus {
@@ -281,6 +280,11 @@ border-color: #211711;
   overflow: hidden;
   border-radius: 10px;
   border: 2px solid #506308;
+}
+
+.avocado-slider.dark {
+  border: 2px solid #211711;
+  outline: 1px solid #506308;
 }
 
 .avocado-slider::-webkit-slider-thumb {
@@ -306,6 +310,11 @@ border-color: #211711;
 
 .avocado-slider:focus {
   outline: 2px solid #211711;
+  outline-offset: 1px;
+}
+
+.avocado-slider.dark:focus {
+  outline: 2px solid #74332c;
   outline-offset: 1px;
 }
 
