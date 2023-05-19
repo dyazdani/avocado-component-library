@@ -75,8 +75,8 @@ label {
   background: #89c954;
   cursor: pointer;
   appearance: none;
-  height: 32px;
-  width: 23px;
+  height: 21px;
+  width: 15px;
   background-color: #a9d04e;
   display: inline-block;
   line-height: 2rem;
@@ -97,12 +97,12 @@ border-color: #506308;
 .avocado-checkbox input:checked::after {
   content: "";
   position: absolute;
-  left: 29px;
-  top: 28px;
-  width: 4px;
-  height: 8.5px;
+  left: 25px;
+  top: 26px;
+  width: 3px;
+  height: 6px;
   border: solid #74332c;
-  border-width: 0 3px 3px 0;
+  border-width: 0 2.5px 2.5px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
