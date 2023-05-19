@@ -223,3 +223,42 @@ border-color: #506308;
   outline: 2px solid #74332c;
   outline-offset: 1px;
 }
+
+/****---SLIDER STYLES---****/
+
+.avocado-slider {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  outline: none;
+  height: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 2px solid #506308;
+}
+
+.avocado-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #74332c;
+
+  box-shadow: -407px 0 0 400px #a9d04e;
+}
+
+.avocado-slider::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #74332c;
+  border: none;
+
+  box-shadow: -407px 0 0 400px #a9d04e;
+}
+
+.avocado-slider:focus {
+  outline: 2px solid #211711;
+  outline-offset: 1px;
+}
