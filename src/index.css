@@ -160,8 +160,8 @@ border-color: #211711;
   }
 
 .avocado-date-picker:focus {
-  outline: 1px solid #74332c;
-  outline-offset: -4px;
+  outline: 2px solid #74332c;
+  outline-offset: 1px;
 }
 
 /****---RADIO DIV STYLES---****/
