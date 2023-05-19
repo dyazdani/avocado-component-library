@@ -217,6 +217,10 @@ border-color: #211711;
 .avocado-radio-group legend {
   font-size: 1.2rem;
 }
+.avocado-radio-group.dark legend {
+  font-size: 1.2rem;
+  color: #a9d04e;
+}
 
 .avocado-radio-group {
   border: 2px solid #74332c;
