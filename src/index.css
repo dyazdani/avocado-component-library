@@ -212,11 +212,11 @@ border-color: #506308;
 
 /****---SELECTOR STYLES---****/
 
-.avocado-number-selector {
+.avocado-selector {
   background-color: #a9d04e;
   border-radius: 5px;
   font-family: inherit;
-  border: none;
+  border: 1px solid #506308;
 }
 
 .avocado-selector:focus {
