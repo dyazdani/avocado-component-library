@@ -89,7 +89,8 @@ label {
 }
 
 .avocado-input-checkbox.dark {
-border-color: #506308;
+outline: 1px solid #506308;
+border-color: #211711;
 }
 
 /* When the checkbox is checked, add inside avocado background */
