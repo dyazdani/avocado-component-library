@@ -176,6 +176,11 @@ border-color: #506308;
   outline: 2px solid #211711;
 }
 
+.avocado-input-radio:focus,
+.avocado-input-radio:checked:focus {
+  outline: 2px solid #74332c;
+}
+
 /****---RADIO GROUP STYLES---****/
 
 .avocado-radio-group legend {
@@ -203,4 +208,18 @@ border-color: #506308;
 .avocado-number-selector:focus {
   outline: 1px solid #74332c;
   outline-offset: -4px;
+}
+
+/****---SELECTOR STYLES---****/
+
+.avocado-number-selector {
+  background-color: #a9d04e;
+  border-radius: 5px;
+  font-family: inherit;
+  border: none;
+}
+
+.avocado-selector:focus {
+  outline: 2px solid #74332c;
+  outline-offset: 1px;
 }
