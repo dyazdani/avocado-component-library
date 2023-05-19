@@ -47,7 +47,7 @@ label {
   width: fit-content;  
   margin: 5px;  
   cursor: pointer;
-  font-size: 22px;
+  font-size: 1.25rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -143,6 +143,43 @@ border-color: #506308;
 .avocado-date-picker:focus {
   outline: 1px solid #74332c;
   outline-offset: -4px;
+}
+
+/****---RADIO DIV STYLES---****/
+
+.avocado-radio-div label {
+  font-size: 1.1rem;
+  margin-left: 5px;
+}
+
+.avocado-input-radio:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #89c95480;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+  outline: 2px solid #211711;
+}
+
+.avocado-input-radio:checked:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #74332c;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+  outline: 2px solid #211711;
 }
 
 /****---NUMBER SELECTOR STYLES---****/
