@@ -139,6 +139,7 @@ border-color: #211711;
 
 .avocado-color-picker:focus {
   outline: 2px solid #74332c;
+  outline-offset: 1px;
 }
 
 /****---DATE PICKER STYLES---****/
@@ -151,7 +152,12 @@ border-color: #211711;
   padding: .5rem;
   background: #a9d04e;
   border-radius: 5px;
+  border: 2px solid #211711;
 }
+
+.avocado-date-picker.dark {
+  outline: 1px solid #506308;
+  }
 
 .avocado-date-picker:focus {
   outline: 1px solid #74332c;
