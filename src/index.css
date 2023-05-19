@@ -32,7 +32,7 @@ button:focus {
 }
 
 button:focus {
-  outline: 2px solid #211711;
+  outline: 2px solid #74332c;
   outline-offset: -4px;
 }
 
