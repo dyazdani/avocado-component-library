@@ -185,6 +185,7 @@ border-color: #506308;
 .avocado-radio-group {
   border: 2px solid #74332c;
     border-radius: 10px;
+    width: fit-content;
 }
 
 /****---NUMBER SELECTOR STYLES---****/
