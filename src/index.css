@@ -11,7 +11,7 @@ button {
   font-family: inherit;
   font-weight: inherit;
   font-size: 1rem;
-  border: none;
+  border: 2px solid #211711;
   padding: 1rem 2rem;
   margin: 0;
   text-decoration: none;
@@ -33,7 +33,7 @@ button:focus {
 
 button:focus {
   outline: 2px solid #74332c;
-  outline-offset: -4px;
+  outline-offset: 1px;
 }
 
 button:active {
@@ -325,9 +325,22 @@ border-color: #211711;
   background: #a9d04e;
   font-family: inherit;
   color: #211711;
+  border: 2px solid #211711;
+
+}
+
+.avocado-text-field.dark {
+  border: 2px solid #211711;
+  outline: 1px solid #506308;
+  height: 1.1rem;
 }
 
 .avocado-text-field:focus {
   outline: 2px solid #211711;
+  outline-offset: 1px;
+}
+
+.avocado-text-field.dark:focus {
+  outline: 2px solid #74332c;
   outline-offset: 1px;
 }
