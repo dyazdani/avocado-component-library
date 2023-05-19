@@ -262,3 +262,17 @@ border-color: #506308;
   outline: 2px solid #211711;
   outline-offset: 1px;
 }
+
+/****---TEXT FIELD DIV STYLES---****/
+
+.avocado-text-field {
+  border-radius: 7px;
+  background: #a9d04e;
+  font-family: inherit;
+  color: #211711;
+}
+
+.avocado-text-field:focus {
+  outline: 2px solid #211711;
+  outline-offset: 1px;
+}
