@@ -122,6 +122,11 @@ border-color: #211711;
   cursor: default;
 }
 
+.avocado-input-checkbox:focus {
+  outline: 2px solid #74332c;
+  outline-offset: 1px;
+}
+
 /****---COLOR PICKER STYLES---****/
 
 .avocado-color-picker {
