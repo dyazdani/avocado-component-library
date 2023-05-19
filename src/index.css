@@ -53,13 +53,17 @@ label {
   user-select: none;
 }
 
+.avocado-label.dark {
+  color: #a9d04e;
+}
+
 /*************************----------STYLES FOR LIGHT (DEFAULT) AND DARK THEMES-----------**********************/
 .light {
   color: #211711;
 }
 
 .dark {
-  color: #a9d04e;
+
 }
 
 /*************************************----------COMPONENT STYLES-----------************************************/
@@ -129,6 +133,7 @@ border-color: #506308;
 }
 
 /****---DATE PICKER STYLES---****/
+
 .avocado-date-picker {
   display: inline-block;
   font-family: inherit;
