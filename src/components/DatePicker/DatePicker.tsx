@@ -13,7 +13,7 @@ const DatePicker = ({name, required}: DatePickerProps) => {
 
   return (
           <input
-          className={`avocado-color-picker ${theme}`}
+          className={`avocado-date-picker ${theme}`}
             type="date"
             name={name}
             data-testid="avocado-date-picker"

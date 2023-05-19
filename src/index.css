@@ -129,6 +129,22 @@ border-color: #506308;
   background-color: #a9d04e;
 }
 
+/****---DATE PICKER STYLES---****/
+.avocado-date-picker {
+  display: inline-block;
+  font-family: inherit;
+  font-weight: inherit;
+  margin: 0;
+  padding: .5rem;
+  background: #a9d04e;
+  border-radius: 5px;
+}
+
+.avocado-date-picker:focus {
+  outline: 1px solid #74332c;
+  outline-offset: -4px;
+}
+
 /****---NUMBER SELECTOR STYLES---****/
 
 .avocado-number-selector {
@@ -139,9 +155,7 @@ border-color: #506308;
     padding: .5rem;
     background: #a9d04e;
     border-radius: 5px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-}
+  }
 
 .avocado-number-selector:focus {
   outline: 1px solid #74332c;
