@@ -1,15 +1,15 @@
-import { useState} from 'react';
 import React from 'react';
 import { ThemeContext } from '../ThemeContext';
+import Box from '../Box';
 
-type themes = 'light' | 'dark'
 
-export default function ThemeProvider({ children }) {
-    const [theme, setTheme] = useState<themes>('light');
+export default function ThemeProvider({ children, theme}) {
     
     return (
-    <ThemeContext.Provider value={{theme, setTheme}}>
+    <ThemeContext.Provider value={theme}>
+      <Box>
         {children}
+      </Box>
     </ThemeContext.Provider>
   )
 }
