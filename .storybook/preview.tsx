@@ -1,7 +1,7 @@
 import type { Preview } from "@storybook/react";
 import React from "react";
 import '../src/index.css';
-import ThemeProvider from "../src/components/ThemeProvider/ThemeProvider";
+import AvocadoThemeProvider from "../src/components/AvocadoThemeProvider/AvocadoThemeProvider";
 import { GlobalStyle } from "./GlobalStyle";
 
 const preview: Preview = {
@@ -35,11 +35,11 @@ export const decorators = [
   (Story, context) => {
     const theme = context.globals.theme === 'light' ? 'light' : 'dark';
     return (
-      <ThemeProvider theme={theme}>
+      <AvocadoThemeProvider theme={theme}>
         {/* Reset storybook paddings */}
         <GlobalStyle />
         <Story />
-      </ThemeProvider>
+      </AvocadoThemeProvider>
     );
   },
 ];
