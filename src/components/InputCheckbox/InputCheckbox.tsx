@@ -1,5 +1,5 @@
 import React from "react";
-import { ThemeContext } from "../Contexts";
+import { ThemeContext } from "../ThemeContext";
 import { useState, useContext } from "react";
 import { CheckboxProps } from "../Checkbox/Checkbox";
 
@@ -10,7 +10,7 @@ const InputCheckbox = ({id, name, disabled}: CheckboxProps) => {
   
   return (
           <input
-            className={theme}
+            className={`avocado-input-checkbox ${theme}`}
             type="checkbox" 
             name={name} 
             id={id} 

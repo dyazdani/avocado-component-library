@@ -1,108 +1,96 @@
+/*------------------------------------******GLOBAL STYLES******------------------------------------*/
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  font-family: 'Ruda', sans-serif;
+  font-weight: 600;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+/****---BUTTON STYLES---****/
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
+  display: inline-block;
   font-family: inherit;
-  background-color: #1a1a1a;
+  font-weight: inherit;
+  font-size: 1rem;
+  border: 2px solid #211711;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  background: #a9d04e;
+  box-shadow: .1rem .1rem .1rem .1rem #211711; 
+  border-radius: 10px;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  text-align: center;
+  transition: background 250ms ease-in-out, 
+              transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+button:hover,
+button:focus {
+  background: #89c954;
 }
 
+button:focus {
+  outline: 2px solid #74332c;
+  outline-offset: 1px;
+}
+
+button:active {
+  transform: scale(0.99);
+}
+
+/****---LABEL STYLES---****/
+
+label {
+  display: inline-block;
+  width: fit-content;  
+  margin: 5px;  
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.avocado-label.dark {
+  color: #a9d04e;
+}
+
+/*************************----------STYLES FOR LIGHT (DEFAULT) AND DARK THEMES-----------**********************/
+.light {
+  color: #211711;
+}
+
+.dark {
+
+}
+
+/*************************************----------COMPONENT STYLES-----------************************************/
+
+/****---CHECKBOX STYLES---****/
 .avocado-checkbox {
   display: flex;
   flex-flow: row nowrap;
 }
 
-.avocado-checkbox label {
-  /* appearance: none; */
-  display: inline-block;
-  width: fit-content;  
-  /* padding-left: 35px; */
-  margin: 5px;  
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  color: #211711;
-  font-family: 'Ruda', sans-serif;
-  font-weight: 600;
-}
-
-
-.avocado-checkbox input {
+.avocado-input-checkbox {
   margin-right: 7px;
   background: #89c954;
   cursor: pointer;
   appearance: none;
-  height: 32px;
-  width: 23px;
+  height: 21px;
+  width: 15px;
   background-color: #a9d04e;
   display: inline-block;
   line-height: 2rem;
   border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
   border: 2px solid #211711;
+}
+
+.avocado-input-checkbox.dark {
+outline: 1px solid #506308;
+border-color: #211711;
 }
 
 /* When the checkbox is checked, add inside avocado background */
@@ -114,12 +102,12 @@ button:focus-visible {
 .avocado-checkbox input:checked::after {
   content: "";
   position: absolute;
-  left: 29px;
-  top: 28px;
-  width: 4px;
-  height: 8.5px;
+  left: 25px;
+  top: 26px;
+  width: 3px;
+  height: 6px;
   border: solid #74332c;
-  border-width: 0 3px 3px 0;
+  border-width: 0 2.5px 2.5px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -134,7 +122,239 @@ button:focus-visible {
   cursor: default;
 }
 
-/* TODO: Figure out how to apply styles to context used in components to create Dark theme */ 
-.dark {
+.avocado-input-checkbox:focus {
+  outline: 2px solid #74332c;
+  outline-offset: 1px;
+}
+
+/****---COLOR PICKER STYLES---****/
+
+.avocado-color-picker {
+  overflow: hidden;
+  padding: 0;
+  display: inline-block;
+  border-radius: 7px;
+  border: 2px solid #211711;
+  background-color: #a9d04e;
+}
+
+.avocado-color-picker.dark {
+  outline: 1px solid #506308;
+  }
+
+.avocado-color-picker:focus {
+  outline: 2px solid #74332c;
+  outline-offset: 1px;
+}
+
+/****---DATE PICKER STYLES---****/
+
+.avocado-date-picker {
+  display: inline-block;
+  font-family: inherit;
+  font-weight: inherit;
+  margin: 0;
+  padding: .5rem;
+  background: #a9d04e;
+  border-radius: 5px;
+  border: 2px solid #211711;
+}
+
+.avocado-date-picker.dark {
+  outline: 1px solid #506308;
+  }
+
+.avocado-date-picker:focus {
+  outline: 2px solid #74332c;
+  outline-offset: 1px;
+}
+
+/****---RADIO DIV STYLES---****/
+
+.avocado-input-radio:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  top: -1px;
+  left: -1px;
+  position: relative;
+  background-color: #a9d04e65;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+   border: 2px solid #211711;
+}
+
+.avocado-input-radio:checked:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  top: .1px;
+  left: .1px;
+  position: relative;
+  background-color: #74332c;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+  outline: 2px solid #211711;
+}
+
+.avocado-input-radio.dark:after,
+.avocado-input-radio.dark:checked:after {
+  outline: 2px solid #506308;
+}
+
+.avocado-input-radio:focus,
+.avocado-input-radio:checked:focus {
+  outline: 2px solid #74332c;
+  outline-offset: 4px;
+  
+}
+
+/****---RADIO GROUP STYLES---****/
+
+.avocado-radio-group legend {
+  font-size: 1.2rem;
+}
+.avocado-radio-group.dark legend {
+  font-size: 1.2rem;
   color: #a9d04e;
+}
+
+.avocado-radio-group {
+  border: 2px solid #74332c;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+/****---NUMBER SELECTOR STYLES---****/
+
+.avocado-number-selector {
+    display: inline-block;
+    font-family: inherit;
+    font-weight: inherit;
+    margin: 0;
+    padding: .5rem;
+    background: #a9d04e;
+    border-radius: 5px;
+    border: 2px solid #211711;
+  }
+
+  .avocado-number-selector.dark {
+    outline: 1px solid #506308;
+    }
+
+.avocado-number-selector:focus {
+  outline: 2px solid #74332c;
+  outline-offset: 1px;
+}
+
+/****---SELECTOR STYLES---****/
+
+.avocado-selector {
+  background-color: #a9d04e;
+  border-radius: 5px;
+  font-family: inherit;
+  border: 1px solid #506308;
+}
+
+.avocado-selector.dark {
+  border: 2px solid #211711;
+  outline: 1px solid #506308;
+}
+
+.avocado-selector:focus {
+  outline: 2px solid #74332c;
+  outline-offset: 1px;
+}
+
+/****---SLIDER STYLES---****/
+
+.avocado-slider {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  outline: none;
+  height: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 2px solid #506308;
+}
+
+.avocado-slider.dark {
+  border: 2px solid #211711;
+  outline: 1px solid #506308;
+}
+
+.avocado-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #74332c;
+
+  box-shadow: -407px 0 0 400px #a9d04e;
+}
+
+.avocado-slider::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #74332c;
+  border: none;
+
+  box-shadow: -407px 0 0 400px #a9d04e;
+}
+
+.avocado-slider:focus {
+  outline: 2px solid #211711;
+  outline-offset: 1px;
+}
+
+.avocado-slider.dark:focus {
+  outline: 2px solid #74332c;
+  outline-offset: 1px;
+}
+
+/****---TEXT FIELD DIV STYLES---****/
+
+.avocado-text-field {
+  border-radius: 7px;
+  background: #a9d04e;
+  font-family: inherit;
+  color: #211711;
+  border: 2px solid #211711;
+
+}
+
+.avocado-text-field.dark {
+  border: 2px solid #211711;
+  outline: 1px solid #506308;
+  height: 1.1rem;
+}
+
+.avocado-text-field:focus {
+  outline: 2px solid #211711;
+  outline-offset: 1px;
+}
+
+.avocado-text-field.dark:focus {
+  outline: 2px solid #74332c;
+  outline-offset: 1px;
+}
+
+
+/****---BOX STYLES---****/
+
+.avocado-box.dark {
+  background-color: #333333;
+}
+
+.avocado-box {
+  background-color: #FFFFFF;
+  width: 100vw;
+  height: 100vh;
+  padding: 30px;
 }

@@ -6,6 +6,7 @@ const meta: Meta<typeof Button> = {
     component: Button,
 }
 
+
 export default meta;
 type Story = StoryObj<typeof Button>;
 
@@ -16,6 +17,6 @@ export const Primary: Story = {
         name: "avocado-button",
         type: "button",
         disabled: false,
-        buttonText: "Add button text"
+        buttonText: "Add button text",
     }
 }

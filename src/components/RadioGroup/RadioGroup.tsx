@@ -1,5 +1,7 @@
 import React from "react";
 import RadioDiv from "../RadioDiv/RadioDiv";
+import { useContext } from "react";
+import { ThemeContext } from "../ThemeContext";
 
 export interface RadioDivProps {
 name: string
@@ -24,8 +26,10 @@ const RadioGroup = ({
   labelTwo, 
   idThree, 
   labelThree}: RadioDivProps) => {
+    const theme = useContext(ThemeContext)
+
   return (
-      <fieldset data-testid="avocado-radio-group">
+      <fieldset data-testid="avocado-radio-group" className={`avocado-radio-group ${theme}`}>
         <legend data-testid='radio-legend'>
           {legend}
         </legend>
