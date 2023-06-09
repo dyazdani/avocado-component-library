@@ -1,1 +1,1 @@
-export { default } from "./AvocadoTextInput";
+export { default } from "./AvocadoTextField";
