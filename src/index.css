@@ -324,9 +324,10 @@ border-color: #211711;
   border-radius: 7px;
   background: #a9d04e;
   font-family: inherit;
+  font-size: 1rem;
   color: #211711;
   border: 2px solid #211711;
-
+  padding: .3rem;
 }
 
 .avocado-text-input.dark {
@@ -343,6 +344,10 @@ border-color: #211711;
 .avocado-text-input.dark:focus {
   outline: 2px solid #74332c;
   outline-offset: 1px;
+}
+
+.avocado-text-field label {
+  font-size: 1.1rem;
 }
 
 
