@@ -1,17 +1,17 @@
 import React from "react";
-import { AvocadoTextFieldDivProps } from "../AvocadoTextFieldDiv/AvocadoTextFieldDiv";
+import { AvocadoTextFieldProps } from "../AvocadoTextFieldDiv/AvocadoTextField";
 import { useContext } from "react";
 import { AvocadoThemeContext } from "../AvocadoThemeContext";
 
 
-const AvocadoTextField = ({id, name, placeholder}: AvocadoTextFieldDivProps ) => {
+const AvocadoTextInput = ({id, name, placeholder}: AvocadoTextFieldProps ) => {
   const theme = useContext(AvocadoThemeContext)
 
   return (
           <input
-            className={`avocado-text-field ${theme}`}
+            className={`avocado-text-input ${theme}`}
             type="text"
-            data-testid="avocado-text-field"
+            data-testid="avocado-text-input"
             placeholder={placeholder}
             id={id}
             name={name}
@@ -19,4 +19,4 @@ const AvocadoTextField = ({id, name, placeholder}: AvocadoTextFieldDivProps ) =>
         )
 };
 
-export default AvocadoTextField;
+export default AvocadoTextInput;

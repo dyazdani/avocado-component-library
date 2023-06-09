@@ -1,1 +1,1 @@
-export { default } from "./AvocadoTextFieldDiv";
+export { default } from "./AvocadoTextField";

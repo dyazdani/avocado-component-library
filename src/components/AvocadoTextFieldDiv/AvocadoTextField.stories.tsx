@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import AvocadoTextFieldDiv from './AvocadoTextFieldDiv';
+import AvocadoTextField from './AvocadoTextField';
 
-const meta: Meta<typeof AvocadoTextFieldDiv> = {
-    title: 'Avocado Text Field Div',
-    component: AvocadoTextFieldDiv,
+const meta: Meta<typeof AvocadoTextField> = {
+    title: 'AvocadoTextField',
+    component: AvocadoTextField,
 }
                                              
 export default meta;
-type Story = StoryObj<typeof AvocadoTextFieldDiv>;
+type Story = StoryObj<typeof AvocadoTextField>;
 
 
 export const Primary: Story = {

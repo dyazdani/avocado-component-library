@@ -1,21 +1,21 @@
 import React from "react";
 import AvocadoLabel from "../AvocadoLabel/AvocadoLabel";
-import AvocadoTextField from "../AvocadoTextField/AvocadoTextField";
+import AvocadoTextInput from "../AvocadoTextField/AvocadoTextInput";
 import { useContext } from "react";
 import { AvocadoThemeContext } from "../AvocadoThemeContext";
 
-export interface AvocadoTextFieldDivProps {
+export interface AvocadoTextFieldProps {
   id: string
   name: string
   label: string
   placeholder: string
 }
 
-const AvocadoTextFieldDiv = ({id, name, label, placeholder}: AvocadoTextFieldDivProps) => {
+const AvocadoTextField = ({id, name, label, placeholder}: AvocadoTextFieldProps) => {
   const theme = useContext(AvocadoThemeContext)
   return (
-      <div data-testid="avocado-text-field-div" className={`avocado-text-field-div ${theme}`}>
-        <AvocadoTextField
+      <div data-testid="avocado-text-field" className={`avocado-text-field ${theme}`}>
+        <AvocadoTextInput
           name={name} 
           id={id}
           placeholder={placeholder}
@@ -25,4 +25,4 @@ const AvocadoTextFieldDiv = ({id, name, label, placeholder}: AvocadoTextFieldDiv
   )
 };
 
-export default AvocadoTextFieldDiv;
+export default AvocadoTextField;
