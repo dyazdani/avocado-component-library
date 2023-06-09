@@ -212,6 +212,12 @@ border-color: #211711;
   
 }
 
+.avocado-input-radio.dark:focus,
+.avocado-input-radio.dark:checked:focus {
+  outline: 2px solid #E5BDBD;
+  
+}
+
 /****---RADIO GROUP STYLES---****/
 
 .avocado-radio-group legend {
@@ -227,6 +233,11 @@ border-color: #211711;
     border-radius: 10px;
     width: fit-content;
 }
+
+.avocado-radio-group.dark {
+  border: 2px solid #E5BDBD;
+}
+
 
 /****---NUMBER SELECTOR STYLES---****/
 
