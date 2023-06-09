@@ -252,21 +252,27 @@ border-color: #211711;
 
 /****---SELECTOR STYLES---****/
 
-.avocado-selector {
+.avocado-select {
   background-color: #a9d04e;
   border-radius: 5px;
   font-family: inherit;
   border: 1px solid #506308;
+  font-size: 1rem;
+  padding: .25rem;
 }
 
-.avocado-selector.dark {
+.avocado-select.dark {
   border: 2px solid #211711;
   outline: 1px solid #506308;
 }
 
-.avocado-selector:focus {
+.avocado-select:focus {
   outline: 2px solid #74332c;
   outline-offset: 1px;
+}
+
+.avocado-selector label {
+  font-size: 1.2rem;
 }
 
 /****---SLIDER STYLES---****/
