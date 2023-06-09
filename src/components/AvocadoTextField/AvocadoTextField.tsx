@@ -8,6 +8,7 @@ export interface AvocadoTextFieldProps {
   id: string
   name: string
   label: string
+  value: string
   placeholder: string
 }
 

@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { AvocadoThemeContext } from "../AvocadoThemeContext";
 
 
-const AvocadoTextInput = ({id, name, placeholder}: AvocadoTextFieldProps ) => {
+const AvocadoTextInput = ({id, value, name, placeholder, handleChange}: AvocadoTextFieldProps ) => {
   const theme = useContext(AvocadoThemeContext)
 
   return (
@@ -14,6 +14,8 @@ const AvocadoTextInput = ({id, name, placeholder}: AvocadoTextFieldProps ) => {
             data-testid="avocado-text-input"
             placeholder={placeholder}
             id={id}
+            value={value}
+            onChange={handleChange}
             name={name}
           />
         )

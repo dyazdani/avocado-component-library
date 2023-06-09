@@ -13,8 +13,9 @@ type Story = StoryObj<typeof AvocadoTextField>;
 export const Primary: Story = {
     args: {
         label: "Add label text",
-        id: "avocado-text-field-div",
-        name: "avocado-text-field-div",
-        placeholder: "Type here"
+        id: "avocado-text-field",
+        name: "avocado-text-field",
+        placeholder: "Type here",
+        value: "value"
     }
 }
