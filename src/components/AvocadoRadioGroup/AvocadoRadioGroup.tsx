@@ -1,10 +1,10 @@
 import React from "react";
-import AvocadoRadioDiv from "../AvocadoRadioDiv/AvocadoRadioDiv";
+import AvocadoRadioGroupItem from "../AvocadoRadioGroupItem/AvocadoRadioGroupItem";
 import { useContext } from "react";
 import { AvocadoThemeContext } from "../AvocadoThemeContext";
 
-export interface AvocadoRadioDivProps {
-name: string
+export interface AvocadoRadioGroupProps {
+  name: string
   legend: string
   idOne: string
   labelOne: string
@@ -25,7 +25,7 @@ const AvocadoRadioGroup = ({
   idTwo, 
   labelTwo, 
   idThree, 
-  labelThree}: AvocadoRadioDivProps) => {
+  labelThree}: AvocadoRadioGroupProps) => {
     const theme = useContext(AvocadoThemeContext)
 
   return (
@@ -33,19 +33,19 @@ const AvocadoRadioGroup = ({
         <legend data-testid='radio-legend'>
           {legend}
         </legend>
-        <AvocadoRadioDiv 
+        <AvocadoRadioGroupItem 
           id={idOne}
           name={name}
           label={labelOne}
           value={idOne}
         />
-        <AvocadoRadioDiv 
+        <AvocadoRadioGroupItem
           id={idTwo}
           name={name}
           label={labelTwo}
           value={idTwo}
         />
-        <AvocadoRadioDiv 
+        <AvocadoRadioGroupItem
           id={idThree}
           name={name}
           label={labelThree}

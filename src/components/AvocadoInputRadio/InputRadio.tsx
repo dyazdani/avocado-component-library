@@ -1,5 +1,5 @@
 import React from "react";
-import { RadioDivProps } from "../AvocadoRadioDiv/AvocadoRadioDiv";
+import { RadioDivProps } from "../AvocadoRadioGroupItem/AvocadoRadioGroupItem";
 import { useContext } from "react";
 import { AvocadoThemeContext } from "../AvocadoThemeContext";
 
