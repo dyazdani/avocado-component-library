@@ -318,9 +318,9 @@ border-color: #211711;
   outline-offset: 1px;
 }
 
-/****---TEXT FIELD DIV STYLES---****/
+/****---TEXT INPUT STYLES---****/
 
-.avocado-text-field {
+.avocado-text-input {
   border-radius: 7px;
   background: #a9d04e;
   font-family: inherit;
@@ -329,18 +329,18 @@ border-color: #211711;
 
 }
 
-.avocado-text-field.dark {
+.avocado-text-input.dark {
   border: 2px solid #211711;
   outline: 1px solid #506308;
   height: 1.1rem;
 }
 
-.avocado-text-field:focus {
+.avocado-text-input:focus {
   outline: 2px solid #211711;
   outline-offset: 1px;
 }
 
-.avocado-text-field.dark:focus {
+.avocado-text-input.dark:focus {
   outline: 2px solid #74332c;
   outline-offset: 1px;
 }

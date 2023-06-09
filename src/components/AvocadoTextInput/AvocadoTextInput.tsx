@@ -1,5 +1,5 @@
 import React from "react";
-import { AvocadoTextFieldProps } from "../AvocadoTextFieldDiv/AvocadoTextField";
+import { AvocadoTextFieldProps } from "../AvocadoTextField/AvocadoTextField";
 import { useContext } from "react";
 import { AvocadoThemeContext } from "../AvocadoThemeContext";
 

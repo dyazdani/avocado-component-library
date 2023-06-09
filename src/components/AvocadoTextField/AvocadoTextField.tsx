@@ -1,6 +1,6 @@
 import React from "react";
 import AvocadoLabel from "../AvocadoLabel/AvocadoLabel";
-import AvocadoTextInput from "../AvocadoTextField/AvocadoTextInput";
+import AvocadoTextInput from "../AvocadoTextInput/AvocadoTextInput";
 import { useContext } from "react";
 import { AvocadoThemeContext } from "../AvocadoThemeContext";
 
