@@ -261,6 +261,10 @@ border-color: #211711;
   outline-offset: 1px;
 }
 
+.avocado-number-selector::placeholder {
+  color: #402E20;
+}
+
 /****---SELECTOR STYLES---****/
 
 .avocado-select {
