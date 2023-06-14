@@ -102,8 +102,8 @@ border-color: #211711;
 .avocado-checkbox input:checked::after {
   content: "";
   position: absolute;
-  left: 25px;
-  top: 26px;
+  left: 39px;
+  top: 39px;
   width: 3px;
   height: 6px;
   border: solid #74332c;
