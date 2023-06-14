@@ -9,16 +9,20 @@ export interface AvocadoCheckboxProps {
   id: string
   name: string
   disabled: boolean
+  checked: "checked" | ""
+  handleChange: () => void
 }
 
-const AvocadoCheckbox = ({label, id, name, disabled}: AvocadoCheckboxProps) => {
+const AvocadoCheckbox = ({label, id, name, disabled, checked, handleChange}: AvocadoCheckboxProps) => {
   const theme = useContext(AvocadoThemeContext)
   return (
       <div className={`avocado-checkbox ${theme}`} data-testid="avocado-checkbox">
         <AvocadoInputCheckbox
           name={name} 
           id={id}
+          checked={checked}
           disabled={disabled}
+          onChange={handleChange}
         />
         <AvocadoLabel id={id} label={label}/>
       </div>

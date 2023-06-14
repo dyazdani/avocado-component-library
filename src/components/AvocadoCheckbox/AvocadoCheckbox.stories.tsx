@@ -16,5 +16,6 @@ export const Primary: Story = {
         id: "avocado-checkbox",
         disabled: false,
         name: "avocado-checkbox",
+        checked: "checked",
     }
 }
