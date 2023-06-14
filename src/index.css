@@ -250,6 +250,7 @@ border-color: #211711;
     background: #a9d04e;
     border-radius: 5px;
     border: 2px solid #211711;
+    width: 10rem;
   }
 
   .avocado-number-selector.dark {
@@ -264,6 +265,10 @@ border-color: #211711;
 .avocado-number-selector::placeholder {
   color: #402E20;
 }
+
+.avocado-number-selector.beyond-min-max {
+  background-color: #FFA8A8;
+  }
 
 /****---SELECTOR STYLES---****/
 
