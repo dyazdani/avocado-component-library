@@ -9,7 +9,7 @@ export interface AvocadoCheckboxProps {
   id: string
   name: string
   disabled: boolean
-  checked: "checked" | ""
+  checked: boolean
   handleChange: () => void
 }
 

@@ -16,6 +16,26 @@ export const Primary: Story = {
         id: "avocado-checkbox",
         disabled: false,
         name: "avocado-checkbox",
-        checked: "checked",
+        checked: false,
+    }
+}
+
+export const Disabled: Story = {
+    args: {
+        label: "Add label text",
+        id: "avocado-checkbox",
+        disabled: true,
+        name: "avocado-checkbox",
+        checked: false,
+    }
+}
+
+export const DisabledAndChecked: Story = {
+    args: {
+        label: "Add label text",
+        id: "avocado-checkbox",
+        disabled: true,
+        name: "avocado-checkbox",
+        checked: true,
     }
 }
