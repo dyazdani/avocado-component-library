@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import AvocadoCheckbox from './AvocadoCheckbox';
 
 const meta: Meta<typeof AvocadoCheckbox> = {
-    title: 'Avocado Checkbox',
+    title: 'AvocadoCheckbox',
     component: AvocadoCheckbox,
 }
 
