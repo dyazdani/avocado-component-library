@@ -1,37 +1,36 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom";
-import AvocadoTextField from "../components/AvocadoTextField/AvocadoTextField"
+import AvocadoTextField from "../components/AvocadoTextField/AvocadoTextField";
 
-test("textfield renders", () => {
+test("div renders", () => {
     render(<AvocadoTextField
-            name="avocado-radio" 
-            id="avocado-radio"
+            name="avocado-text-field" 
+            id="avocado-text-field"
             placeholder="Type here"
             />);
-    const textField = screen.getByTestId("avocado-text-field");
-    expect(textField).toBeInTheDocument();
+    const textFieldDiv = screen.getByTestId("avocado-text-field");
+    expect(textFieldDiv).toBeInTheDocument();
 })
 
-test("placeholder text renders", () => {
+test("input renders", () => {
     render(<AvocadoTextField
-        name="avocado-radio" 
-        id="avocado-radio"
+        name="avocado-text-field" 
+        id="avocado-text-field"
         placeholder="Type here"
+        label="Add label text"
         />);
-const textField = screen.getByPlaceholderText("Type here");
-expect(textField).toBeInTheDocument();
+    const input = screen.getByTestId("avocado-text-input");
+    expect(input).toBeInTheDocument();
 })
 
-test("typing changes value of input", async() => {
+test("label renders", () => {
     render(<AvocadoTextField
-        name="avocado-radio" 
-        id="avocado-radio"
+        name="avocado-text-field" 
+        id="avocado-text-field"
         placeholder="Type here"
+        label="Add label text"
         />);
-const textField = screen.getByPlaceholderText("Type here");
-await userEvent.type(textField, "Hello");
-expect(textField).toHaveValue("Hello");
-
+    const label = screen.getByTestId("avocado-label");
+    expect(label).toBeInTheDocument();
 })

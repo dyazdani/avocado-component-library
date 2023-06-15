@@ -1,23 +1,23 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import AvocadoRadioDiv from "../components/AvocadoRadioDiv/AvocadoRadioDiv";
+import AvocadoRadioGroupItem from "../components/AvocadoRadioGroupItem/AvocadoRadioGroupItem";
 
 test("div renders", () => {
-    render(<AvocadoRadioDiv
-            name="avocado-radio-div" 
-            id="avocado-radio-div"
+    render(<AvocadoRadioGroupItem
+            name="avocado-radio-group-item" 
+            id="one"
             value="selection"
             label="Add label text"
             />);
-    const radioDiv = screen.getByTestId("avocado-radio-div");
+    const radioDiv = screen.getByTestId('avocado-radio-group-item-one');
     expect(radioDiv).toBeInTheDocument();
 })
 
 test("input renders", () => {
-    render(<AvocadoRadioDiv
-        name="avocado-radio-div" 
-        id="avocado-radio-div"
+    render(<AvocadoRadioGroupItem
+        name="avocado-radio-group-item" 
+        id="avocado-radio-group-item"
         value="selection"
         label="Add label text"
         />);
@@ -26,9 +26,9 @@ test("input renders", () => {
 })
 
 test("label renders", () => {
-    render(<AvocadoRadioDiv
-        name="avocado-radio-div" 
-        id="avocado-radio-div"
+    render(<AvocadoRadioGroupItem
+        name="avocado-radio-group-item" 
+        id="avocado-radio-group-item"
         value="selection"
         label="Add label text"
         />);
