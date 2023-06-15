@@ -9,12 +9,12 @@ interface AvocadoDatePickerProps {
   min: `${number}-${number}-${number}`
   max: `${number}-${number}-${number}`
   value: `${number}-${number}-${number}`
-  handleChange: () => void
+  onChange: () => void
 
 }
 
 
-const AvocadoDatePicker = ({name, required, min, max, step, value, handleChange}: AvocadoDatePickerProps) => {
+const AvocadoDatePicker = ({name, required, min, max, step, value, onChange}: AvocadoDatePickerProps) => {
   const theme = useContext(AvocadoThemeContext)
 
 
@@ -29,7 +29,7 @@ const AvocadoDatePicker = ({name, required, min, max, step, value, handleChange}
             data-testid="avocado-date-picker"
             required={required}
             value={value}
-            onChange={handleChange}
+            onChange={onChange}
           />
         )
 };

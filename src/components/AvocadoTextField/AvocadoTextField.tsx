@@ -10,10 +10,10 @@ export interface AvocadoTextFieldProps {
   label: string
   value: string
   placeholder: string
-  handleChange: () => void
+  onChange: () => void
 }
 
-const AvocadoTextField = ({id, name, label, placeholder, value, handleChange}: AvocadoTextFieldProps) => {
+const AvocadoTextField = ({id, name, label, placeholder, value, onChange}: AvocadoTextFieldProps) => {
   const theme = useContext(AvocadoThemeContext)
   return (
       <div data-testid="avocado-text-field" className={`avocado-text-field ${theme}`}>
@@ -21,7 +21,7 @@ const AvocadoTextField = ({id, name, label, placeholder, value, handleChange}: A
           name={name} 
           id={id}
           placeholder={placeholder}
-          handleChange={handleChange}
+          onChange={onChange}
           value={value}
         />
         <AvocadoLabel id={id} label={label}/>
