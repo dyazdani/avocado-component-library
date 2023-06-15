@@ -1,3 +1,4 @@
+//TODO: Casting types in TypeScript
 const isWithinRange = (min: number, max: number, number: number | string): boolean => {
     console.log(number)
     if (number === '') {
