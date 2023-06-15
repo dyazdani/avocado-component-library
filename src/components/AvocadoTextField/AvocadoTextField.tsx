@@ -10,6 +10,7 @@ export interface AvocadoTextFieldProps {
   label: string
   value: string
   placeholder: string
+  handleChange: () => void
 }
 
 const AvocadoTextField = ({id, name, label, placeholder, value, handleChange}: AvocadoTextFieldProps) => {
