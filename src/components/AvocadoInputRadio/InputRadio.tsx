@@ -1,10 +1,10 @@
 import React from "react";
-import { RadioDivProps } from "../AvocadoRadioDiv/AvocadoRadioDiv";
+import { AvocadoRadioGroupItemProps } from "../AvocadoRadioGroupItem/AvocadoRadioGroupItem";
 import { useContext } from "react";
 import { AvocadoThemeContext } from "../AvocadoThemeContext";
 
 
-const InputRadio = ({name, value}: RadioDivProps) => {
+const InputRadio = ({name, value}: AvocadoRadioGroupItemProps) => {
   const theme = useContext(AvocadoThemeContext)
 
   return (

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import AvocadoNumberSelector from './AvocadoNumberSelector';
 
 const meta: Meta<typeof AvocadoNumberSelector> = {
-    title: 'Avocado Number Selector',
+    title: 'AvocadoNumberSelector',
     component: AvocadoNumberSelector,
 }
 
@@ -13,6 +13,10 @@ type Story = StoryObj<typeof AvocadoNumberSelector>;
 export const Primary: Story = {
     args: {
         name: "avocado-number-selector",
-        id: "avocado-number-selector"    
+        id: "avocado-number-selector",
+        min: 0,
+        max: 100,
+        step: 'any',
+        placeholder: 'Enter number here',    
     }
 }

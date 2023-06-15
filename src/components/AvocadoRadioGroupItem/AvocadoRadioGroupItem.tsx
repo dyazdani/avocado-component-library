@@ -4,26 +4,26 @@ import AvocadoLabel from "../AvocadoLabel/AvocadoLabel";
 import { useContext } from "react";
 import { AvocadoThemeContext } from "../AvocadoThemeContext";
 
-export interface AvocadoRadioDivProps {
+export interface AvocadoRadioGroupItemProps {
   id: string
   name: string
   label: string
   value: string
 }
 
-const AvocadoRadioDiv = ({id, name, label, value}: AvocadoRadioDivProps) => {
+const AvocadoRadioGroupItem = ({id, name, label, value}: AvocadoRadioGroupItemProps) => {
   const theme = useContext(AvocadoThemeContext)
   return (
-      <div data-testid={`avocado-radio-div-${id}`} className={`avocado-radio-div ${theme}`}>
+      <div data-testid={`avocado-radio-group-item-${id}`} className={`avocado-radio-group-item ${theme}`}>
         <AvocadoInputRadio
           name={name} 
           id={id}
           value={value}
-          data-testid="avocado-radio-div"
+          data-testid="avocado-input-radio"
         />
         <AvocadoLabel id={id} label={label}/>
       </div>
   )
 };
 
-export default AvocadoRadioDiv;
+export default AvocadoRadioGroupItem;

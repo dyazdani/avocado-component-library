@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import AvocadoDatePicker from './AvocadoDatePicker';
 
 const meta: Meta<typeof AvocadoDatePicker> = {
-    title: 'Avocado Date Picker',
+    title: 'AvocadoDatePicker',
     component: AvocadoDatePicker,
 }
 
@@ -13,6 +13,9 @@ type Story = StoryObj<typeof AvocadoDatePicker>;
 export const Primary: Story = {
     args: {
         name: "avocado-date-picker",
-        required: false
+        min: "",
+        max: "",
+        required: false,
+        step: 1,
     }
 }

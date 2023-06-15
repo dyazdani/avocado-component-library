@@ -27,9 +27,9 @@ describe("Elements render", () => {
                 idThree="3"
                 />);
         
-        const radioDivOne = screen.getByTestId("avocado-radio-div-1");
-        const radioDivTwo = screen.getByTestId("avocado-radio-div-2");
-        const radioDivThree = screen.getByTestId("avocado-radio-div-3");
+        const radioDivOne = screen.getByTestId("avocado-radio-group-item-1");
+        const radioDivTwo = screen.getByTestId("avocado-radio-group-item-2");
+        const radioDivThree = screen.getByTestId("avocado-radio-group-item-3");
     
         expect(radioDivOne).toBeInTheDocument();
         expect(radioDivTwo).toBeInTheDocument();

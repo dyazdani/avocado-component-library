@@ -36,8 +36,19 @@ button:focus {
   outline-offset: 1px;
 }
 
+button.dark:focus {
+  outline: 2px solid #E1B7B7;
+  outline-offset: 1px;
+}
+
 button:active {
   transform: scale(0.99);
+  background-color: #619B31;
+}
+
+button:disabled {
+  background-color: #423829; 
+  color: #D9C9B4;
 }
 
 /****---LABEL STYLES---****/
@@ -102,8 +113,8 @@ border-color: #211711;
 .avocado-checkbox input:checked::after {
   content: "";
   position: absolute;
-  left: 25px;
-  top: 26px;
+  left: 39px;
+  top: 39px;
   width: 3px;
   height: 6px;
   border: solid #74332c;
@@ -127,6 +138,12 @@ border-color: #211711;
   outline-offset: 1px;
 }
 
+.avocado-input-checkbox.dark:focus {
+  outline: 2px solid #E1B7B7;
+  outline-offset: 1px;
+}
+
+
 /****---COLOR PICKER STYLES---****/
 
 .avocado-color-picker {
@@ -144,6 +161,11 @@ border-color: #211711;
 
 .avocado-color-picker:focus {
   outline: 2px solid #74332c;
+  outline-offset: 1px;
+}
+
+.avocado-color-picker.dark:focus {
+  outline: 2px solid #E1B7B7;
   outline-offset: 1px;
 }
 
@@ -166,6 +188,11 @@ border-color: #211711;
 
 .avocado-date-picker:focus {
   outline: 2px solid #74332c;
+  outline-offset: 1px;
+}
+
+.avocado-date-picker.dark:focus {
+  outline: 2px solid #E1B7B7;
   outline-offset: 1px;
 }
 
@@ -212,6 +239,12 @@ border-color: #211711;
   
 }
 
+.avocado-input-radio.dark:focus,
+.avocado-input-radio.dark:checked:focus {
+  outline: 2px solid #E1B7B7;
+  
+}
+
 /****---RADIO GROUP STYLES---****/
 
 .avocado-radio-group legend {
@@ -228,6 +261,11 @@ border-color: #211711;
     width: fit-content;
 }
 
+.avocado-radio-group.dark {
+  border: 2px solid #E1B7B7;
+}
+
+
 /****---NUMBER SELECTOR STYLES---****/
 
 .avocado-number-selector {
@@ -239,6 +277,7 @@ border-color: #211711;
     background: #a9d04e;
     border-radius: 5px;
     border: 2px solid #211711;
+    width: 10rem;
   }
 
   .avocado-number-selector.dark {
@@ -250,23 +289,49 @@ border-color: #211711;
   outline-offset: 1px;
 }
 
+.avocado-number-selector.dark:focus {
+  outline: 2px solid #E1B7B7;
+  outline-offset: 1px;
+}
+
+.avocado-number-selector::placeholder {
+  color: #402E20;
+}
+
+.avocado-number-selector.beyond-min-max {
+  background-color: #FFA8A8;
+  }
+
 /****---SELECTOR STYLES---****/
 
-.avocado-selector {
+.avocado-select {
   background-color: #a9d04e;
   border-radius: 5px;
   font-family: inherit;
   border: 1px solid #506308;
+  font-size: 1rem;
+  padding: .25rem;
+  padding-left: .75rem;
 }
 
-.avocado-selector.dark {
+.avocado-select.dark {
   border: 2px solid #211711;
   outline: 1px solid #506308;
 }
 
-.avocado-selector:focus {
+.avocado-select:focus {
   outline: 2px solid #74332c;
   outline-offset: 1px;
+}
+
+.avocado-select.dark:focus {
+  outline: 2px solid #E1B7B7;
+  outline-offset: 1px;
+}
+
+.avocado-selector label {
+  font-size: 1.2rem;
+  padding-right: .25rem;
 }
 
 /****---SLIDER STYLES---****/
@@ -276,7 +341,7 @@ border-color: #211711;
   -webkit-appearance: none;
   cursor: pointer;
   outline: none;
-  height: 10px;
+  height: 20px;
   overflow: hidden;
   border-radius: 10px;
   border: 2px solid #506308;
@@ -290,8 +355,8 @@ border-color: #211711;
 .avocado-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  height: 10px;
-  width: 10px;
+  height: 20px;
+  width: 20px;
   border-radius: 50%;
   background-color: #74332c;
 
@@ -299,8 +364,8 @@ border-color: #211711;
 }
 
 .avocado-slider::-moz-range-thumb {
-  height: 15px;
-  width: 15px;
+  height: 20px;
+  width: 20px;
   border-radius: 50%;
   background-color: #74332c;
   border: none;
@@ -309,40 +374,45 @@ border-color: #211711;
 }
 
 .avocado-slider:focus {
-  outline: 2px solid #211711;
-  outline-offset: 1px;
-}
-
-.avocado-slider.dark:focus {
   outline: 2px solid #74332c;
   outline-offset: 1px;
 }
 
-/****---TEXT FIELD DIV STYLES---****/
+.avocado-slider.dark:focus {
+  outline: 2px solid #E1B7B7;
+  outline-offset: 1px;
+}
 
-.avocado-text-field {
+/****---TEXT INPUT STYLES---****/
+
+.avocado-text-input {
   border-radius: 7px;
   background: #a9d04e;
   font-family: inherit;
+  font-size: 1rem;
   color: #211711;
   border: 2px solid #211711;
-
+  padding: .3rem;
 }
 
-.avocado-text-field.dark {
+.avocado-text-input.dark {
   border: 2px solid #211711;
   outline: 1px solid #506308;
   height: 1.1rem;
 }
 
-.avocado-text-field:focus {
-  outline: 2px solid #211711;
+.avocado-text-input:focus {
+  outline: 2px solid #74332c;
   outline-offset: 1px;
 }
 
-.avocado-text-field.dark:focus {
-  outline: 2px solid #74332c;
+.avocado-text-input.dark:focus {
+  outline: 2px solid #E1B7B7;
   outline-offset: 1px;
+}
+
+.avocado-text-field label {
+  font-size: 1.1rem;
 }
 
 

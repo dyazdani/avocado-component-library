@@ -1,29 +1,33 @@
 import React from "react";
+import AvocadoSelect from "../AvocadoSelect/AvocadoSelect";
+import AvocadoLabel from "../AvocadoLabel/AvocadoLabel";
 import { useContext } from "react";
-import AvocadoSelectOption from "../AvocadoSelectOption/AvocadoSelectOption";
-import {AvocadoSelectorDivProps} from "../AvocadoSelectorDiv/AvocadoSelectorDiv"
 import { AvocadoThemeContext } from "../AvocadoThemeContext";
 
+export interface AvocadoSelectorProps {
+  id: string
+  name: string
+  label: string
+  valueOne: string
+  valueTwo: string
+  valueThree: string
+}
 
-const AvocadoSelector = ({name, id, valueOne, valueTwo, valueThree}: AvocadoSelectorDivProps) => {
-  const theme = useContext(AvocadoThemeContext);
+const AvocadoSelector = ({id, name, label, valueOne, valueTwo, valueThree}: AvocadoSelectorProps) => {
+  const theme = useContext(AvocadoThemeContext)
+
   return (
-          <select
-            className={`avocado-selector ${theme}`}
-            name={name}
-            id={id}
-            data-testid="avocado-selector">
-            <option
-              value="" 
-              data-testid="avocado-select-option-instructions">--Please choose an option--
-            </option>
-            <AvocadoSelectOption value={valueOne}/>
-            <AvocadoSelectOption value={valueTwo}/>
-            <AvocadoSelectOption value={valueThree}/>
-          </select>
-          
-          
-        )
+      <div data-testid="avocado-selector" className={`avocado-selector ${theme}`}>
+        <AvocadoLabel id={id} label={label}/>
+        <AvocadoSelect
+          name={name}
+          id={id}
+          valueOne={valueOne}
+          valueTwo={valueTwo}
+          valueThree={valueThree}
+        />
+      </div>
+  )
 };
 
 export default AvocadoSelector;

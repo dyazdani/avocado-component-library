@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import AvocadoColorPicker from './AvocadoColorPicker';
 
 const meta: Meta<typeof AvocadoColorPicker> = {
-    title: 'Avocado Color Picker',
+    title: 'AvocadoColorPicker',
     component: AvocadoColorPicker,
 }
 
