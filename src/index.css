@@ -38,6 +38,12 @@ button:focus {
 
 button:active {
   transform: scale(0.99);
+  background-color: #619B31;
+}
+
+button:disabled {
+  background-color: #423829; 
+  color: #D9C9B4;
 }
 
 /****---LABEL STYLES---****/
