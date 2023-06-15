@@ -36,6 +36,11 @@ button:focus {
   outline-offset: 1px;
 }
 
+button.dark:focus {
+  outline: 2px solid #E1B7B7;
+  outline-offset: 1px;
+}
+
 button:active {
   transform: scale(0.99);
   background-color: #619B31;
@@ -133,6 +138,12 @@ border-color: #211711;
   outline-offset: 1px;
 }
 
+.avocado-input-checkbox.dark:focus {
+  outline: 2px solid #E1B7B7;
+  outline-offset: 1px;
+}
+
+
 /****---COLOR PICKER STYLES---****/
 
 .avocado-color-picker {
@@ -150,6 +161,11 @@ border-color: #211711;
 
 .avocado-color-picker:focus {
   outline: 2px solid #74332c;
+  outline-offset: 1px;
+}
+
+.avocado-color-picker.dark:focus {
+  outline: 2px solid #E1B7B7;
   outline-offset: 1px;
 }
 
@@ -172,6 +188,11 @@ border-color: #211711;
 
 .avocado-date-picker:focus {
   outline: 2px solid #74332c;
+  outline-offset: 1px;
+}
+
+.avocado-date-picker.dark:focus {
+  outline: 2px solid #E1B7B7;
   outline-offset: 1px;
 }
 
@@ -220,7 +241,7 @@ border-color: #211711;
 
 .avocado-input-radio.dark:focus,
 .avocado-input-radio.dark:checked:focus {
-  outline: 2px solid #E5BDBD;
+  outline: 2px solid #E1B7B7;
   
 }
 
@@ -241,7 +262,7 @@ border-color: #211711;
 }
 
 .avocado-radio-group.dark {
-  border: 2px solid #E5BDBD;
+  border: 2px solid #E1B7B7;
 }
 
 
@@ -265,6 +286,11 @@ border-color: #211711;
 
 .avocado-number-selector:focus {
   outline: 2px solid #74332c;
+  outline-offset: 1px;
+}
+
+.avocado-number-selector.dark:focus {
+  outline: 2px solid #E1B7B7;
   outline-offset: 1px;
 }
 
@@ -295,6 +321,11 @@ border-color: #211711;
 
 .avocado-select:focus {
   outline: 2px solid #74332c;
+  outline-offset: 1px;
+}
+
+.avocado-select.dark:focus {
+  outline: 2px solid #E1B7B7;
   outline-offset: 1px;
 }
 
@@ -343,12 +374,12 @@ border-color: #211711;
 }
 
 .avocado-slider:focus {
-  outline: 2px solid #211711;
+  outline: 2px solid #74332c;
   outline-offset: 1px;
 }
 
 .avocado-slider.dark:focus {
-  outline: 2px solid #74332c;
+  outline: 2px solid #E1B7B7;
   outline-offset: 1px;
 }
 
@@ -371,12 +402,12 @@ border-color: #211711;
 }
 
 .avocado-text-input:focus {
-  outline: 2px solid #211711;
+  outline: 2px solid #74332c;
   outline-offset: 1px;
 }
 
 .avocado-text-input.dark:focus {
-  outline: 2px solid #74332c;
+  outline: 2px solid #E1B7B7;
   outline-offset: 1px;
 }
 
