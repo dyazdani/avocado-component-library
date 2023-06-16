@@ -7,10 +7,11 @@ export interface AvocadoRadioGroupItemProps {
   id: string
   name: string
   label: string
-  value: string
+  value?: string
+  checked?: boolean
 }
 
-const AvocadoInputRadio = ({name, value}: AvocadoRadioGroupItemProps) => {
+const AvocadoInputRadio = ({name, value, checked}: AvocadoRadioGroupItemProps) => {
   const theme = useContext(AvocadoThemeContext)
 
   return (
@@ -19,12 +20,13 @@ const AvocadoInputRadio = ({name, value}: AvocadoRadioGroupItemProps) => {
             type="radio"
             name={name}
             value={value}
+            checked={checked}
             data-testid="avocado-input-radio"
           />
         )
 };
 
-const AvocadoRadioGroupItem = ({id, name, label, value}: AvocadoRadioGroupItemProps) => {
+const AvocadoRadioGroupItem = ({id, name, label, value, checked}: AvocadoRadioGroupItemProps) => {
   const theme = useContext(AvocadoThemeContext)
   return (
       <div data-testid={`avocado-radio-group-item-${id}`} className={`avocado-radio-group-item ${theme}`}>
@@ -32,6 +34,7 @@ const AvocadoRadioGroupItem = ({id, name, label, value}: AvocadoRadioGroupItemPr
           name={name} 
           id={id}
           value={value}
+          checked={checked}
           data-testid="avocado-input-radio"
         />
         <AvocadoLabel htmlFor={id} label={label}/>
