@@ -10,6 +10,7 @@ export interface AvocadoCheckboxProps {
   name: string
   disabled: boolean
   checked: boolean
+  htmlFor: string
   handleChange: () => void
 }
 
@@ -24,7 +25,7 @@ const AvocadoCheckbox = ({label, id, name, disabled, checked, handleChange}: Avo
           disabled={disabled}
           onChange={handleChange}
         />
-        <AvocadoLabel id={id} label={label}/>
+        <AvocadoLabel htmlFor={id} label={label}/>
       </div>
   )
 };

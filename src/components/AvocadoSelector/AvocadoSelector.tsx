@@ -18,7 +18,7 @@ const AvocadoSelector = ({id, name, label, valueOne, valueTwo, valueThree}: Avoc
 
   return (
       <div data-testid="avocado-selector" className={`avocado-selector ${theme}`}>
-        <AvocadoLabel id={id} label={label}/>
+        <AvocadoLabel htmlFor={id} label={label}/>
         <AvocadoSelect
           name={name}
           id={id}

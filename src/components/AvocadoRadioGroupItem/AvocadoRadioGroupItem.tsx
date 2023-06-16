@@ -34,7 +34,7 @@ const AvocadoRadioGroupItem = ({id, name, label, value}: AvocadoRadioGroupItemPr
           value={value}
           data-testid="avocado-input-radio"
         />
-        <AvocadoLabel id={id} label={label}/>
+        <AvocadoLabel htmlFor={id} label={label}/>
       </div>
   )
 };
