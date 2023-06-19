@@ -284,8 +284,8 @@ label {
   }
 
   .avocado-number-selector.dark {
-    outline: 1px solid #506308;
-    }
+    border: none;
+  }
 
 .avocado-number-selector:focus {
   outline: 2px solid #74332c;
