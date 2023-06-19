@@ -35,10 +35,13 @@ button:focus {
   outline-offset: 1px;
 }
 
+button.dark {
+  border: none;
+}
+
 button.dark:focus {
   outline: 2px solid #E1B7B7;
   outline-offset: 1px;
-  border: none;
 }
 
 button:active {
@@ -49,13 +52,6 @@ button:active {
 button:disabled {
   background-color: #423829; 
   color: #D9C9B4;
-}
-
-button.dark,
-button.dark:hover,
-button.dark:active,
-button.dark:disabled {
-  border: none;
 }
 
 /****---LABEL STYLES---****/
