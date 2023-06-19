@@ -345,8 +345,7 @@ label {
 }
 
 .avocado-slider.dark {
-  border: 2px solid #211711;
-  outline: 1px solid #506308;
+  border: none;
 }
 
 .avocado-slider::-webkit-slider-thumb {
