@@ -26,8 +26,7 @@ button {
   -moz-appearance: none;
 }
 
-button:hover,
-button:focus {
+button:hover {
   background: #89c954;
 }
 
@@ -39,6 +38,7 @@ button:focus {
 button.dark:focus {
   outline: 2px solid #E1B7B7;
   outline-offset: 1px;
+  border: none;
 }
 
 button:active {
@@ -49,6 +49,13 @@ button:active {
 button:disabled {
   background-color: #423829; 
   color: #D9C9B4;
+}
+
+button.dark,
+button.dark:hover,
+button.dark:active,
+button.dark:disabled {
+  border: none;
 }
 
 /****---LABEL STYLES---****/
