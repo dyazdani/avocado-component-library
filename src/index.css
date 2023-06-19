@@ -392,9 +392,7 @@ label {
 }
 
 .avocado-text-input.dark {
-  border: 2px solid #211711;
-  outline: 1px solid #506308;
-  height: 1.1rem;
+  border: none;
 }
 
 .avocado-text-input:focus {
