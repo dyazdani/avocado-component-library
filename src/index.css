@@ -231,7 +231,8 @@ label {
 
 .avocado-input-radio.dark:after,
 .avocado-input-radio.dark:checked:after {
-  /* outline: 2px solid #506308; */
+  border: 2px solid #a9d04e;
+  outline: #a9d04e;
 }
 
 .avocado-input-radio:focus,
