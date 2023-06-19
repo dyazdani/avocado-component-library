@@ -9,9 +9,10 @@ export interface AvocadoRadioGroupItemProps {
   label: string
   value?: string
   checked?: boolean
+  required?: boolean 
 }
 
-const AvocadoInputRadio = ({name, value, checked}: AvocadoRadioGroupItemProps) => {
+const AvocadoInputRadio = ({name, value, checked, id}: AvocadoRadioGroupItemProps) => {
   const theme = useContext(AvocadoThemeContext)
 
   return (
@@ -19,6 +20,7 @@ const AvocadoInputRadio = ({name, value, checked}: AvocadoRadioGroupItemProps) =
           className={`avocado-input-radio ${theme}`}
             type="radio"
             name={name}
+            id={id}
             value={value}
             checked={checked}
             data-testid="avocado-input-radio"

@@ -4,11 +4,12 @@ import { AvocadoThemeContext } from "../AvocadoThemeContext";
 
 export interface AvocadoRadioGroupProps {
   name: string
-  legend: string
+  legend?: string
   label: string
   value?: string
   id: string
   checked?: boolean
+  required?: boolean 
 }
 
 const AvocadoRadioGroup = ({
@@ -18,31 +19,36 @@ const AvocadoRadioGroup = ({
   value,
   id,
   checked,
-  children,
+  required,
+  children
   }: PropsWithChildren<AvocadoRadioGroupProps>) => {
     const theme = useContext(AvocadoThemeContext)
 //TODO: Throw an error if it receives a type that you do not want (i.e., not a radio group item)
 
-const renderChildren() => {
-  return React.Children.map(children, (child) => {
+const renderChildren = () => {
+  //TODO: Fix TS errors
+  return React.Children.map((child: React.Element<any>) => {
   return React.cloneElement(child, {
     name: name,
     label: label,
     value: value,
     id: id,
-    checked: checked, 
+    checked: checked,
+    required: required, 
     });
-  });
+  }, children);
 };
   
-  return (
+  return legend ? (
       <fieldset data-testid="avocado-radio-group" className={`avocado-radio-group ${theme}`}>
         <legend data-testid='radio-legend'>
           {legend}
         </legend>
         {renderChildren()}
       </fieldset>
-  )
+  ) : <fieldset data-testid="avocado-radio-group" className={`avocado-radio-group ${theme}`}>
+        {renderChildren()}
+      </fieldset>
 };
 
 export default AvocadoRadioGroup;
