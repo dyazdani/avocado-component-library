@@ -198,7 +198,7 @@ label {
   outline-offset: 1px;
 }
 
-/****---RADIO DIV STYLES---****/
+/****---RADIO GROUP ITEM STYLES---****/
 
 .avocado-input-radio:after {
   width: 10px;
@@ -207,7 +207,7 @@ label {
   top: -1px;
   left: -1px;
   position: relative;
-  background-color: #a9d04e65;
+  background-color: #a9d04e;
   content: '';
   display: inline-block;
   visibility: visible;
@@ -225,13 +225,13 @@ label {
   content: '';
   display: inline-block;
   visibility: visible;
-  border: 2px solid white;
+  border: 2px solid #a9d04e;
   outline: 2px solid #211711;
 }
 
 .avocado-input-radio.dark:after,
 .avocado-input-radio.dark:checked:after {
-  outline: 2px solid #506308;
+  /* outline: 2px solid #506308; */
 }
 
 .avocado-input-radio:focus,
