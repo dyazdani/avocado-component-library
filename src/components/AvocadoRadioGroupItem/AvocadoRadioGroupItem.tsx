@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ChangeEvent } from "react";
 import AvocadoInputRadio from "../AvocadoInputRadio/InputRadio";
 import AvocadoLabel from "../AvocadoLabel/AvocadoLabel";
 import { useContext } from "react";
@@ -9,9 +9,13 @@ export interface AvocadoRadioGroupItemProps {
   name: string
   label: string
   value: string
+  checked: boolean
+  disabled: boolean
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void
+
 }
 
-const AvocadoRadioGroupItem = ({id, name, label, value}: AvocadoRadioGroupItemProps) => {
+const AvocadoRadioGroupItem = ({id, name, label, value, disabled, checked, onChange}: AvocadoRadioGroupItemProps) => {
   const theme = useContext(AvocadoThemeContext)
   return (
       <div data-testid={`avocado-radio-group-item-${id}`} className={`avocado-radio-group-item ${theme}`}>
@@ -20,6 +24,9 @@ const AvocadoRadioGroupItem = ({id, name, label, value}: AvocadoRadioGroupItemPr
           id={id}
           value={value}
           data-testid="avocado-input-radio"
+          onChange={onChange}
+          disabled={disabled}
+          checked={checked}
         />
         <AvocadoLabel id={id} label={label}/>
       </div>
