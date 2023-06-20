@@ -1,3 +1,4 @@
+//TODO: control this component and move it into AvocadoCHeckbox component
 import React from "react";
 import { AvocadoThemeContext } from "../AvocadoThemeContext";
 import { useState, useContext } from "react";
