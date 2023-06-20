@@ -3,14 +3,40 @@
 ## A React component library inspired by the titular fruit.
 
 ### Description 
+Includes a light and a dark theme, and a theme provider component for passing that theme to descendant components.
 
 ### How to install
+npm
+```npm install avocado-component-library```
 
 ### Use AvocadoThemeProvider to Provide Light and Dark Themes
+
+Wrap your parent-most component in the AvocadoThemeProvider in order to provide the light and dark theme to that component and all its children. 
+
+For example, if you had a parent-most component called `<App />`:
+```
+import React from 'react';
+import { AvocadoThemeContext } from '../AvocadoThemeContext';
+import AvocadoBox from '../AvocadoBox';
+
+
+export default function AvocadoThemeProvider({ theme }) {
+    
+    return (
+    <AvocadoThemeContext.Provider value={theme}>
+      <AvocadoBox>
+        <App />
+      </AvocadoBox>
+    </AvocadoThemeContext.Provider>
+  )
+}
+```
+If you use AvocadoThemeProvider, descendant components do not need to import `AvocadoThemeContext.tsx` and thus do not need the import statement `import { AvocadoThemeContext } from "../AvocadoThemeContext";`
 
 ### License
 
 ### Version
+
 
 
 
