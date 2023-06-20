@@ -1,14 +1,14 @@
 import React, { ChangeEvent } from "react";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { AvocadoThemeContext } from "../AvocadoThemeContext";
-import isWithinRange from "../../functions";
+import isWithinRange from "../../utilities";
 
 interface AvocadoNumberSelectorProps {
   name: string
   id?: string
-  min?: number
-  max?: number
-  step?: number | string
+  min?: string
+  max?: string
+  step?: string
   placeholder?: string
   value: string
   onChange: (e: ChangeEvent<HTMLInputElement>) => void
@@ -17,15 +17,12 @@ interface AvocadoNumberSelectorProps {
 
 
 const AvocadoNumberSelector = ({name, id, min, max, step, placeholder, value, onChange}: AvocadoNumberSelectorProps) => {
-  // const [number, setNumber] = useState('');
   const theme = useContext(AvocadoThemeContext)
 
-  // TODO: Handle undefined in isWithinRange
-  const showError = min && max && !isWithinRange(min, max, value);
+  const showError = !isWithinRange(min, max, value);
 
   return (
           <input
-          //TODO: check that && does not return false or 'false' or something else 
           className={`avocado-number-selector ${theme} ${showError && 'beyond-min-max'}`}
           type="number"
             name={name}
