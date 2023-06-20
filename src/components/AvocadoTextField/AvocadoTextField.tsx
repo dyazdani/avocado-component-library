@@ -25,6 +25,9 @@ const AvocadoTextInput = ({id, value, name, placeholder, onChange}: AvocadoTextF
             value={value}
             onChange={onChange}
             name={name}
+            //TODO: Add minLength and maxLength props?
+            //TODO: Add size prop?
+            //TODO: Add required and disabled props
           />
         )
 };
