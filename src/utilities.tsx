@@ -1,12 +1,11 @@
-//TODO: Casting types in TypeScript
 const isWithinRange = (min: string | undefined, max: string | undefined, value: string | undefined): boolean => {
-    if (value === '' || value === undefined) {
+    if (!value) {
       return true;
     }
-    if (min && value < min) {
+    if (min && +value < +min) {
       return false
     }
-    if (max && value > max) {
+    if (max && +value > +max) {
       return false
     }
     return true;
