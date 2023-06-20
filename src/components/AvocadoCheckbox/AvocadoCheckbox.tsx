@@ -1,4 +1,4 @@
-import React from "react";
+import React, {ChangeEvent} from "react";
 import AvocadoInputCheckbox from "../AvocadoInputCheckbox/AvocadoInputCheckbox";
 import AvocadoLabel from "../AvocadoLabel/AvocadoLabel";
 import { AvocadoThemeContext } from "../AvocadoThemeContext";
@@ -10,10 +10,10 @@ export interface AvocadoCheckboxProps {
   name: string
   disabled: boolean
   checked: boolean
-  handleChange: () => void
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void
 }
 
-const AvocadoCheckbox = ({label, id, name, disabled, checked, handleChange}: AvocadoCheckboxProps) => {
+const AvocadoCheckbox = ({label, id, name, disabled, checked, onChange}: AvocadoCheckboxProps) => {
   const theme = useContext(AvocadoThemeContext)
   return (
       <div className={`avocado-checkbox ${theme}`} data-testid="avocado-checkbox">
@@ -22,7 +22,7 @@ const AvocadoCheckbox = ({label, id, name, disabled, checked, handleChange}: Avo
           id={id}
           checked={checked}
           disabled={disabled}
-          onChange={handleChange}
+          onChange={onChange}
         />
         <AvocadoLabel id={id} label={label}/>
       </div>
