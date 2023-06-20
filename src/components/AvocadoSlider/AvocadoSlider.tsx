@@ -1,4 +1,4 @@
-import React from "react";
+import React, {ChangeEvent} from "react";
 import { useContext } from "react";
 import { AvocadoThemeContext } from "../AvocadoThemeContext";
 
@@ -8,9 +8,11 @@ export interface AvocadoSliderProps {
   min: number
   max: number
   step: number
+  value: string
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void
 }
 
-const AvocadoSlider = ({id, name, min, max, step}: AvocadoSliderProps) => {
+const AvocadoSlider = ({id, name, min, max, step, value, onChange}: AvocadoSliderProps) => {
   const theme = useContext(AvocadoThemeContext)
 
   return (
@@ -23,6 +25,8 @@ const AvocadoSlider = ({id, name, min, max, step}: AvocadoSliderProps) => {
         max={max}
         step={step}
         data-testid="avocado-slider"
+        value={value}
+        onChange={onChange}
       />
   )
 };
