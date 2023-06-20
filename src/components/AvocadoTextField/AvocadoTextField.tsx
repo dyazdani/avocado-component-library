@@ -1,6 +1,5 @@
-import React from "react";
+import React, {ChangeEvent} from "react";
 import AvocadoLabel from "../AvocadoLabel/AvocadoLabel";
-import AvocadoTextInput from "../AvocadoTextInput/AvocadoTextInput";
 import { useContext } from "react";
 import { AvocadoThemeContext } from "../AvocadoThemeContext";
 
@@ -9,9 +8,26 @@ export interface AvocadoTextFieldProps {
   name: string
   label: string
   value: string
-  placeholder: string
-  onChange: () => void
+  placeholder?: string
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void
 }
+
+const AvocadoTextInput = ({id, value, name, placeholder, onChange}: AvocadoTextFieldProps ) => {
+  const theme = useContext(AvocadoThemeContext)
+
+  return (
+          <input
+            className={`avocado-text-input ${theme}`}
+            type="text"
+            data-testid="avocado-text-input"
+            placeholder={placeholder}
+            id={id}
+            value={value}
+            onChange={onChange}
+            name={name}
+          />
+        )
+};
 
 const AvocadoTextField = ({id, name, label, placeholder, value, onChange}: AvocadoTextFieldProps) => {
   const theme = useContext(AvocadoThemeContext)

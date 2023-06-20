@@ -11,7 +11,7 @@ interface AvocadoNumberSelectorProps {
   step?: string
   placeholder?: string
   value: string
-  onChange: (e: ChangeEvent<HTMLInputElement>) => void
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void
   // onChange: (value: string) => void
 }
 
