@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { AvocadoThemeContext } from "../AvocadoThemeContext";
 
 interface AvocadoDatePickerProps {
+  id?: string
   name?: string
   required?: boolean
   disabled?: boolean
@@ -15,7 +16,7 @@ interface AvocadoDatePickerProps {
 }
 
 
-const AvocadoDatePicker = ({name, required, min, max, step, value, disabled, onChange}: AvocadoDatePickerProps) => {
+const AvocadoDatePicker = ({id, name, required, min, max, step, value, disabled, onChange}: AvocadoDatePickerProps) => {
   const theme = useContext(AvocadoThemeContext)
 
 
@@ -23,6 +24,7 @@ const AvocadoDatePicker = ({name, required, min, max, step, value, disabled, onC
           <input
           className={`avocado-date-picker ${theme}`}
             type="date"
+            id={id}
             name={name}
             min={min}
             max={max}
