@@ -1,24 +1,22 @@
-# Avocado Component Library
+# Avocado Component Library 🥑
 
-## A React component library inspired by the titular fruit.
+## A React component library for web-based projects.
 
 ### Description 
-Includes a light and a dark theme, and a theme provider component for passing that theme to descendant components.
+Includes light and dark themes, with a theme provider component for passing that theme to children.
 
 ### How to install
 npm
 ```npm install avocado-component-library```
 
-### Use AvocadoThemeProvider to Provide Light and Dark Themes
+### Use AvocadoThemeProvider to Provide Light and Dark Themes to Children Components
+Wrap your parent-most component in the AvocadoThemeProvider component to pass the theme to the parent-most component's children. An AvocadoBox component is provided for wrapping your parent-most component in a <div> element, if necessary, before wrapping that in AvocadoThemeProvider. 
 
-Wrap your parent-most component in the AvocadoThemeProvider in order to provide the light and dark theme to that component and all its children. 
-
-For example, if you had a parent-most component called `<App />`:
+For example, if your parent-most component was `<App />`:
 ```
 import React from 'react';
 import { AvocadoThemeContext } from '../AvocadoThemeContext';
 import AvocadoBox from '../AvocadoBox';
-
 
 export default function AvocadoThemeProvider({ theme }) {
     
@@ -31,12 +29,16 @@ export default function AvocadoThemeProvider({ theme }) {
   )
 }
 ```
-If you use AvocadoThemeProvider, descendant components do not need to import `AvocadoThemeContext.tsx` and thus do not need the import statement `import { AvocadoThemeContext } from "../AvocadoThemeContext";`
+NOTE: If you use AvocadoThemeProvider, descendant components do not need to import `AvocadoThemeContext.tsx` and thus do not need the import statement `import { AvocadoThemeContext } from "../AvocadoThemeContext";`
+
+### Contributors
+Dara Yazdani | dara.s.yazdani@gmail.com
 
 ### License
+ISC
 
 ### Version
-
+1.0.0
 
 
 
