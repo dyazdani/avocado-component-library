@@ -10,7 +10,7 @@ export interface AvocadoButtonProps {
   value?: string
   buttonText?: string
   form?: string
-  formAction?: string // TODO: How to I make this type a URL string?
+  formAction?: string
   formEncType?: "multipart/form-data" | "text/plain"
   formNoValidate?: boolean
   formTarget?: "_blank" | "_parent" | "_top" | `_${string}`
@@ -45,13 +45,13 @@ const AvocadoButton = ({
         name={name}
         type={type}
         form={form}
-        formaction={formAction}
-        formenctype={formEncType}
-        formnovalidate={formNoValidate}
-        formtarget={formTarget}
-        formmethod={formMethod}
-        popovertarget={popoverTarget}
-        popovertargetaction={popoverTargetAction}
+        formAction={formAction}
+        formEncType={formEncType}
+        formNoValidate={formNoValidate}
+        formTarget={formTarget}
+        formMethod={formMethod}
+        popoverTarget={popoverTarget}
+        popoverTargetAction={popoverTargetAction}
         disabled={disabled}
         autofocus={autoFocus}
         onChange={onChange}
