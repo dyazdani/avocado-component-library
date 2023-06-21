@@ -14,6 +14,6 @@ export const Primary: Story = {
     args: {
         name: "avocado-color-picker",
         id: "avocado-color-picker",
-        value: "#a9d04e"
+        value: "#74332c"
     }
 }
