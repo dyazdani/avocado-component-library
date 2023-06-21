@@ -21,23 +21,22 @@ const AvocadoRadioGroup = ({
   checked,
   required,
   children
-  }: PropsWithChildren<AvocadoRadioGroupProps>) => {
-    const theme = useContext(AvocadoThemeContext)
+}: PropsWithChildren<AvocadoRadioGroupProps>) => {
+  const theme = useContext(AvocadoThemeContext)
 //TODO: Throw an error if it receives a type that you do not want (i.e., not a radio group item)
 
-const renderChildren = () => {
-  //TODO: Fix TS errors
-  return React.Children.map((child: React.Element<any>) => {
-  return React.cloneElement(child, {
-    name: name,
-    label: label,
-    value: value,
-    id: id,
-    checked: checked,
-    required: required, 
+  const renderChildren = () => {
+    return React.Children.map(children, (child: React.ReactNode) => {
+      return React.cloneElement((child as React.ReactElement), {
+        name: name,
+        label: label,
+        value: value,
+        id: id,
+        checked: checked,
+        required: required, 
+        });
     });
-  }, children);
-};
+  };
   
   return legend ? (
       <fieldset data-testid="avocado-radio-group" className={`avocado-radio-group ${theme}`}>
