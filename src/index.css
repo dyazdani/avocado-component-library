@@ -26,14 +26,17 @@ button {
   -moz-appearance: none;
 }
 
-button:hover,
-button:focus {
+button:hover {
   background: #89c954;
 }
 
 button:focus {
   outline: 2px solid #74332c;
   outline-offset: 1px;
+}
+
+button.dark {
+  border: none;
 }
 
 button.dark:focus {
@@ -100,8 +103,7 @@ label {
 }
 
 .avocado-input-checkbox.dark {
-outline: 1px solid #506308;
-border-color: #211711;
+  border: none;
 }
 
 /* When the checkbox is checked, add inside avocado background */
@@ -156,7 +158,7 @@ border-color: #211711;
 }
 
 .avocado-color-picker.dark {
-  outline: 1px solid #506308;
+  border: none;
   }
 
 .avocado-color-picker:focus {
@@ -183,7 +185,7 @@ border-color: #211711;
 }
 
 .avocado-date-picker.dark {
-  outline: 1px solid #506308;
+  border: none;
   }
 
 .avocado-date-picker:focus {
@@ -196,7 +198,7 @@ border-color: #211711;
   outline-offset: 1px;
 }
 
-/****---RADIO DIV STYLES---****/
+/****---RADIO GROUP ITEM STYLES---****/
 
 .avocado-input-radio:after {
   width: 10px;
@@ -205,7 +207,7 @@ border-color: #211711;
   top: -1px;
   left: -1px;
   position: relative;
-  background-color: #a9d04e65;
+  background-color: #a9d04e;
   content: '';
   display: inline-block;
   visibility: visible;
@@ -223,13 +225,14 @@ border-color: #211711;
   content: '';
   display: inline-block;
   visibility: visible;
-  border: 2px solid white;
+  border: 2px solid #a9d04e;
   outline: 2px solid #211711;
 }
 
 .avocado-input-radio.dark:after,
 .avocado-input-radio.dark:checked:after {
-  outline: 2px solid #506308;
+  border: 2px solid #a9d04e;
+  outline: #a9d04e;
 }
 
 .avocado-input-radio:focus,
@@ -281,8 +284,8 @@ border-color: #211711;
   }
 
   .avocado-number-selector.dark {
-    outline: 1px solid #506308;
-    }
+    border: none;
+  }
 
 .avocado-number-selector:focus {
   outline: 2px solid #74332c;
@@ -308,19 +311,13 @@ border-color: #211711;
   background-color: #a9d04e;
   border-radius: 5px;
   font-family: inherit;
-  border: 1px solid #506308;
   font-size: 1rem;
   padding: .25rem;
   padding-left: .75rem;
 }
 
-.avocado-select.dark {
-  border: 2px solid #211711;
-  outline: 1px solid #506308;
-}
-
 .avocado-select:focus {
-  outline: 2px solid #74332c;
+  outline: 2px solid #73332b;
   outline-offset: 1px;
 }
 
@@ -348,8 +345,7 @@ border-color: #211711;
 }
 
 .avocado-slider.dark {
-  border: 2px solid #211711;
-  outline: 1px solid #506308;
+  border: none;
 }
 
 .avocado-slider::-webkit-slider-thumb {
@@ -396,9 +392,7 @@ border-color: #211711;
 }
 
 .avocado-text-input.dark {
-  border: 2px solid #211711;
-  outline: 1px solid #506308;
-  height: 1.1rem;
+  border: none;
 }
 
 .avocado-text-input:focus {
