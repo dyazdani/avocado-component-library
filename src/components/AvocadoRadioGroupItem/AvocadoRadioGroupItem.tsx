@@ -6,13 +6,14 @@ import { AvocadoThemeContext } from "../AvocadoThemeContext";
 export interface AvocadoRadioGroupItemProps {
   id: string
   name: string
-  label: string
+  label?: string
   value?: string
   checked?: boolean
   required?: boolean 
+  disabled?: boolean
 }
 
-const AvocadoInputRadio = ({name, value, checked, id}: AvocadoRadioGroupItemProps) => {
+const AvocadoInputRadio = ({name, value, checked, id, disabled, required}: AvocadoRadioGroupItemProps) => {
   const theme = useContext(AvocadoThemeContext)
 
   return (
@@ -23,6 +24,8 @@ const AvocadoInputRadio = ({name, value, checked, id}: AvocadoRadioGroupItemProp
             id={id}
             value={value}
             checked={checked}
+            disabled={disabled}
+            required={required}
             data-testid="avocado-input-radio"
           />
         )
@@ -33,11 +36,11 @@ const AvocadoRadioGroupItem = ({id, name, label, value, checked}: AvocadoRadioGr
   return (
       <div data-testid={`avocado-radio-group-item-${id}`} className={`avocado-radio-group-item ${theme}`}>
         <AvocadoInputRadio
-          name={name} 
-          id={id}
-          value={value}
-          checked={checked}
-          data-testid="avocado-input-radio"
+        name={name}
+        id={id}
+        value={value}
+        checked={checked}
+        data-testid="avocado-input-radio"
         />
         <AvocadoLabel htmlFor={id} label={label}/>
       </div>

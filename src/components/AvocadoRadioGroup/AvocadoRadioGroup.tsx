@@ -5,21 +5,13 @@ import { AvocadoThemeContext } from "../AvocadoThemeContext";
 export interface AvocadoRadioGroupProps {
   name: string
   legend?: string
-  label: string
-  value?: string
-  id: string
-  checked?: boolean
-  required?: boolean 
+  id?: string
+  disabled?: boolean
 }
 
 const AvocadoRadioGroup = ({
   name,
   legend,
-  label,
-  value,
-  id,
-  checked,
-  required,
   children
 }: PropsWithChildren<AvocadoRadioGroupProps>) => {
   const theme = useContext(AvocadoThemeContext)
@@ -29,11 +21,6 @@ const AvocadoRadioGroup = ({
     return React.Children.map(children, (child: React.ReactNode) => {
       return React.cloneElement((child as React.ReactElement), {
         name: name,
-        label: label,
-        value: value,
-        id: id,
-        checked: checked,
-        required: required, 
         });
     });
   };
