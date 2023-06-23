@@ -1,28 +1,33 @@
 import React from "react";
-import AvocadoSelect from "../AvocadoSelect/AvocadoSelect";
-import AvocadoLabel from "../AvocadoLabel/AvocadoLabel";
 import { useContext, PropsWithChildren } from "react";
 import { AvocadoThemeContext } from "../AvocadoThemeContext";
 
-export interface AvocadoSelectorProps {
+interface AvocadoSelectorProps {
   id: string
   name: string
-  label: string
+  selectMessage?: string
 }
 
 const AvocadoSelector = ({
   id, 
-  name, 
-  label, 
+  name,
+  selectMessage, 
   children
   }: PropsWithChildren<AvocadoSelectorProps>) => {
-    const theme = useContext(AvocadoThemeContext)
+  const theme = useContext(AvocadoThemeContext)
 
   return (
-      <div data-testid="avocado-selector" className={`avocado-selector ${theme}`}>
-        <AvocadoLabel htmlFor={id} label={label}/>
+    <select
+      className={`avocado-select ${theme}`}
+      name={name}
+      id={id}
+      data-testid="avocado-select">
+        <option
+          value="" 
+          data-testid="avocado-select-option-instructions">{selectMessage}
+        </option>
         {children}
-      </div>
+    </select>
   )
 };
 
