@@ -3,7 +3,7 @@
 ## A React component library inspired by the titular fruit.
 
 ### Description 
-Includes a light and a dark theme, and a theme provider component for passing that theme to descendant components.
+Controlled form components that you can use to create your very own Avocado-inspired forms in your React application. Supports a light and a dark theme using React context + Theme Provider.
 
 ### How to install
 npm
