@@ -13,7 +13,7 @@ npm
 
 Wrap your highest level component using Avocado components in the AvocadoThemeProvider in order to provide the light and dark theme to that component and all its children. 
 
-For example, if you had a parent-most component called `<App />`:
+For example, if you had a top-level component called `<App />`:
 ```
 import React from 'react';
 import { AvocadoThemeContext } from '../AvocadoThemeContext';
