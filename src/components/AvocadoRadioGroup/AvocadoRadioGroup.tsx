@@ -15,7 +15,6 @@ const AvocadoRadioGroup = ({
   children
 }: PropsWithChildren<AvocadoRadioGroupProps>) => {
   const theme = useContext(AvocadoThemeContext)
-//TODO: Throw an error if it receives a type that you do not want (i.e., not a radio group item)
 
   const renderChildren = () => {
     return React.Children.map(children, (child: React.ReactNode) => {
