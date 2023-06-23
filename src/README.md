@@ -31,7 +31,7 @@ export default function AvocadoThemeProvider({ theme }) {
   )
 }
 ```
-If you use AvocadoThemeProvider, descendant components do not need to import `AvocadoThemeContext.tsx` and thus do not need the import statement `import { AvocadoThemeContext } from "../AvocadoThemeContext";`
+If you use AvocadoThemeProvider, descendant components won't not need to import `AvocadoThemeContext`.
 
 ### License
 
