@@ -14,9 +14,11 @@ export const Primary: Story = {
     args: {
         name: "avocado-number-selector",
         id: "avocado-number-selector",
-        min: 0,
-        max: 100,
+        min: '0',
+        max: '100',
         step: 'any',
-        placeholder: 'Enter number here',    
+        placeholder: 'Enter number here',
+        value: '50',
+        //TODO: How to include an onChange function that will let the number selector button change the number. It is not currently working in Storybook.
     }
 }

@@ -1,3 +1,5 @@
+//TODO: Control component after merging changes from children branch
+//TODO: Move AvocadoSelect adn AvocadoSelectOption to this module after merging changes from children branch
 import React from "react";
 import AvocadoSelect from "../AvocadoSelect/AvocadoSelect";
 import AvocadoLabel from "../AvocadoLabel/AvocadoLabel";

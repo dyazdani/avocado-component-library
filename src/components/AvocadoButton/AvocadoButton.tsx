@@ -1,16 +1,24 @@
-import React from "react";
+import React, { ChangeEvent } from "react";
 import { useContext } from "react";
 import { AvocadoThemeContext } from "../AvocadoThemeContext";
 
 export interface AvocadoButtonProps {
-  id: string
-  name: string
+  id?: string
+  name?: string
   type: "button" | "reset" | "submit"
-  disabled: boolean
-  buttonText: string
+  disabled?: boolean
+  value?: string
+  buttonText?: string
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void
 }
 
-const AvocadoButton = ({id, name, type, disabled, buttonText}: AvocadoButtonProps) => {
+const AvocadoButton = ({
+  id, 
+  name, 
+  type, 
+  disabled, 
+  buttonText, 
+  onChange}: AvocadoButtonProps) => {
   const theme = useContext(AvocadoThemeContext)
   return (
       <button
@@ -19,6 +27,7 @@ const AvocadoButton = ({id, name, type, disabled, buttonText}: AvocadoButtonProp
         name={name}
         type={type}
         disabled={disabled}
+        onChange={onChange}
         data-testid="avocado-button"
       >{buttonText}</button>
   )
