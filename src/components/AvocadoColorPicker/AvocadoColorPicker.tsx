@@ -1,5 +1,5 @@
 import React, { ChangeEvent } from "react";
-import { useState, useContext} from "react";
+import {useContext} from "react";
 import { AvocadoThemeContext } from "../AvocadoThemeContext";
 
 interface AvocadoColorPickerProps {
@@ -11,7 +11,6 @@ interface AvocadoColorPickerProps {
 
 
 const AvocadoColorPicker = ({name, id, value, onChange}: AvocadoColorPickerProps) => {
-  // const [color, setColor] = useState('#74332c');
   const theme = useContext(AvocadoThemeContext)
 
   return (
