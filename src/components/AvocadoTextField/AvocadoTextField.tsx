@@ -5,14 +5,18 @@ import { AvocadoThemeContext } from "../AvocadoThemeContext";
 
 export interface AvocadoTextFieldProps {
   id: string
-  name: string
-  label: string
-  value: string
+  name?: string
+  label?: string
+  value?: string
   placeholder?: string
+  disabled?: boolean
+  size?: number | undefined
+  minLength?: number | undefined
+  maxLength?: number | undefined
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void
 }
 
-const AvocadoTextInput = ({id, value, name, placeholder, onChange}: AvocadoTextFieldProps ) => {
+const AvocadoTextInput = ({id, value, name, placeholder, disabled, minLength, maxLength, size, onChange}: AvocadoTextFieldProps ) => {
   const theme = useContext(AvocadoThemeContext)
 
   return (
@@ -23,11 +27,12 @@ const AvocadoTextInput = ({id, value, name, placeholder, onChange}: AvocadoTextF
             placeholder={placeholder}
             id={id}
             value={value}
+            disabled={disabled}
+            minLength={minLength}
+            maxLength={maxLength}
+            size={size}
             onChange={onChange}
             name={name}
-            //TODO: Add minLength and maxLength props?
-            //TODO: Add size prop?
-            //TODO: Add required and disabled props
           />
         )
 };
