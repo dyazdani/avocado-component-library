@@ -11,7 +11,7 @@ npm
 
 ### Use AvocadoThemeProvider to Provide Light and Dark Themes
 
-Wrap your parent-most component in the AvocadoThemeProvider in order to provide the light and dark theme to that component and all its children. 
+Wrap your highest level component using Avocado components in the AvocadoThemeProvider in order to provide the light and dark theme to that component and all its children. 
 
 For example, if you had a parent-most component called `<App />`:
 ```
