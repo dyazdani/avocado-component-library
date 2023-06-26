@@ -6,11 +6,11 @@ interface AvocadoColorPickerProps {
   id?: string
   name?: string
   value?: string
-  onChange?: (e: ChangeEvent<HTMLInputElement>) => void
+  onInput?: (e: ChangeEvent<HTMLInputElement>) => void
 }
 
 
-const AvocadoColorPicker = ({name, id, value, onChange}: AvocadoColorPickerProps) => {
+const AvocadoColorPicker = ({name, id, value, onInput}: AvocadoColorPickerProps) => {
   const theme = useContext(AvocadoThemeContext)
 
   return (
@@ -21,7 +21,7 @@ const AvocadoColorPicker = ({name, id, value, onChange}: AvocadoColorPickerProps
             data-testid="avocado-color-picker"
             id={id}
             value={value}
-            onChange={onChange}
+            onInput={onInput}
           />
         )
 };
