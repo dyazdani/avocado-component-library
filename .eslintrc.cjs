@@ -3,7 +3,10 @@ module.exports = {
     browser: true,
     es2020: true
   },
-  extends: ['plugin:jest-dom/recommended', 'eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react-hooks/recommended', 'plugin:storybook/recommended'],
+  extends: ['plugin:jest-dom/recommended', 'eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react-hooks/recommended', 'plugin:storybook/recommended', "plugin:mdx/recommended"],
+  settings: {
+    "mdx/code-blocks": true
+  },
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
