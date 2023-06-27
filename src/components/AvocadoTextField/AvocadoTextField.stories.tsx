@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import AvocadoTextField from './AvocadoTextField';
 
 const meta: Meta<typeof AvocadoTextField> = {
-    title: 'AvocadoTextField',
+    title: 'Components/AvocadoTextField',
     component: AvocadoTextField,
 }
                                              

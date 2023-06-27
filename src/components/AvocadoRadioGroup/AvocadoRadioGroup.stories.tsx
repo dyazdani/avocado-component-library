@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import AvocadoRadioGroup from './AvocadoRadioGroup';
 
 const meta: Meta<typeof AvocadoRadioGroup> = {
-    title: 'AvocadoRadioGroup',
+    title: 'Components/AvocadoRadioGroup',
     component: AvocadoRadioGroup,
 }
                                              

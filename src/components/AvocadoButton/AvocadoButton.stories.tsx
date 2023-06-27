@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import AvocadoButton from './AvocadoButton';
 
 const meta: Meta<typeof AvocadoButton> = {
-    title: 'AvocadoButton',
+    title: 'Components/AvocadoButton',
     component: AvocadoButton,
 }
 
