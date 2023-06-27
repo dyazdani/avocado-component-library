@@ -11,6 +11,7 @@ type Story = StoryObj<typeof AvocadoNumberSelector>;
 
 
 export const Primary: Story = {
+    name: "Default",
     args: {
         name: "avocado-number-selector",
         id: "avocado-number-selector",

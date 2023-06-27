@@ -11,6 +11,7 @@ type Story = StoryObj<typeof AvocadoRadioGroupItem>;
 
 
 export const Primary: Story = {
+    name: "Default",
     args: {
         label: "Add label text",
         id: "avocado-radio-group-item",

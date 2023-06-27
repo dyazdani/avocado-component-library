@@ -11,6 +11,7 @@ type Story = StoryObj<typeof AvocadoColorPicker>;
 
 
 export const Primary: Story = {
+    name: "Default",
     args: {
         name: "avocado-color-picker",
         id: "avocado-color-picker",

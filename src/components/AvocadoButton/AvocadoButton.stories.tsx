@@ -12,6 +12,7 @@ type Story = StoryObj<typeof AvocadoButton>;
 
 
 export const Primary: Story = {
+    name: "Default",
     args: {
         id: "avocado-button",
         name: "avocado-button",

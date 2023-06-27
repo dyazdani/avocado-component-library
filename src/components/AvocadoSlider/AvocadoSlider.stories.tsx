@@ -11,6 +11,7 @@ type Story = StoryObj<typeof AvocadoSlider>;
 
 
 export const Primary: Story = {
+    name: "Default",
     args: {
         id: "avocado-slider",
         name: "avocado-slider",

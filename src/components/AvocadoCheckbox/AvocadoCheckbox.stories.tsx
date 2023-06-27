@@ -11,6 +11,7 @@ type Story = StoryObj<typeof AvocadoCheckbox>;
 
 
 export const Primary: Story = {
+    name: "Default",
     args: {
         label: "Add label text",
         id: "avocado-checkbox",
