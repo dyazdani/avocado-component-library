@@ -4,6 +4,7 @@ import AvocadoSlider from './AvocadoSlider';
 const meta: Meta<typeof AvocadoSlider> = {
     title: 'Components/AvocadoSlider',
     component: AvocadoSlider,
+    tags: ['autodocs'],
 }
 
 export default meta;

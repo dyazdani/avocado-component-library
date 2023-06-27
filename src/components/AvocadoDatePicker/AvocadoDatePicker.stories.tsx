@@ -4,6 +4,7 @@ import AvocadoDatePicker from './AvocadoDatePicker';
 const meta: Meta<typeof AvocadoDatePicker> = {
     title: 'Components/AvocadoDatePicker',
     component: AvocadoDatePicker,
+    tags: ['autodocs'],
 }
 
 export default meta;

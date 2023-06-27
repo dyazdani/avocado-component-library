@@ -4,6 +4,7 @@ import AvocadoColorPicker from './AvocadoColorPicker';
 const meta: Meta<typeof AvocadoColorPicker> = {
     title: 'Components/AvocadoColorPicker',
     component: AvocadoColorPicker,
+    tags: ['autodocs'],
 }
 
 export default meta;

@@ -4,6 +4,7 @@ import AvocadoTextField from './AvocadoTextField';
 const meta: Meta<typeof AvocadoTextField> = {
     title: 'Components/AvocadoTextField',
     component: AvocadoTextField,
+    tags: ['autodocs'],
 }
                                              
 export default meta;

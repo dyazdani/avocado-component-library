@@ -4,6 +4,7 @@ import AvocadoRadioGroup from './AvocadoRadioGroup';
 const meta: Meta<typeof AvocadoRadioGroup> = {
     title: 'Components/AvocadoRadioGroup',
     component: AvocadoRadioGroup,
+    tags: ['autodocs'],
 }
                                              
 export default meta;

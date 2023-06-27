@@ -4,6 +4,7 @@ import AvocadoButton from './AvocadoButton';
 const meta: Meta<typeof AvocadoButton> = {
     title: 'Components/AvocadoButton',
     component: AvocadoButton,
+    tags: ['autodocs'],
 }
 
 
