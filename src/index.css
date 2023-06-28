@@ -171,6 +171,10 @@ label {
   outline-offset: 1px;
 }
 
+.avocado-color-picker:disabled {
+  background-color: #3a471c;
+}
+
 /****---DATE PICKER STYLES---****/
 
 .avocado-date-picker {

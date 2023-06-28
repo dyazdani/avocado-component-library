@@ -6,11 +6,12 @@ interface AvocadoColorPickerProps {
   id?: string
   name?: string
   value?: string
+  disabled?: boolean
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void
 }
 
 
-const AvocadoColorPicker = ({name, id, value, onChange}: AvocadoColorPickerProps) => {
+const AvocadoColorPicker = ({name, id, value, disabled, onChange}: AvocadoColorPickerProps) => {
   // const [color, setColor] = useState('#74332c');
   const theme = useContext(AvocadoThemeContext)
 
@@ -21,6 +22,7 @@ const AvocadoColorPicker = ({name, id, value, onChange}: AvocadoColorPickerProps
             name={name}
             data-testid="avocado-color-picker"
             id={id}
+            disabled={disabled}
             value={value}
             onChange={onChange}
           />
