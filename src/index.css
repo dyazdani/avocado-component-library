@@ -390,6 +390,10 @@ label {
   outline-offset: 1px;
 }
 
+.avocado-slider:disabled{
+  background-color: #a9d04e;
+}
+
 /****---TEXT INPUT STYLES---****/
 
 .avocado-text-input {

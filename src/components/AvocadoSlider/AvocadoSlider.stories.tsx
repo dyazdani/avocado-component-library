@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import AvocadoSlider from './AvocadoSlider';
+import React from 'react';
 
 const meta: Meta<typeof AvocadoSlider> = {
     title: 'AvocadoSlider',
@@ -11,11 +12,14 @@ type Story = StoryObj<typeof AvocadoSlider>;
 
 
 export const Primary: Story = {
+    render: () => <AvocadoSlider />
+}
+
+export const Disabled: Story = {
+    render: () => <AvocadoSlider disabled={true} />
+}
+
+export const Playground: Story = {
     args: {
-        id: "avocado-slider",
-        name: "avocado-slider",
-        min: 1,
-        max: 100,
-        step: 1,
     }
 }
