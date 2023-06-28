@@ -248,8 +248,11 @@ label {
 
 .avocado-input-radio.dark:focus,
 .avocado-input-radio.dark:checked:focus {
-  outline: 2px solid #E1B7B7;
-  
+  outline: 2px solid #E1B7B7; 
+}
+
+.avocado-input-radio:disabled {
+  background-color: #3a471c;
 }
 
 /****---RADIO GROUP STYLES---****/
