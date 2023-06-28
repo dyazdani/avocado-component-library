@@ -4,15 +4,16 @@ import { useContext } from "react";
 import { AvocadoThemeContext } from "../AvocadoThemeContext";
 
 export interface AvocadoTextFieldProps {
-  id: string
-  name: string
-  label: string
-  value: string
+  id?: string
+  name?: string
+  label?: string
+  value?: string
+  disabled?: boolean
   placeholder?: string
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void
 }
 
-const AvocadoTextInput = ({id, value, name, placeholder, onChange}: AvocadoTextFieldProps ) => {
+const AvocadoTextInput = ({id, value, name, disabled, placeholder, onChange}: AvocadoTextFieldProps ) => {
   const theme = useContext(AvocadoThemeContext)
 
   return (
@@ -21,6 +22,7 @@ const AvocadoTextInput = ({id, value, name, placeholder, onChange}: AvocadoTextF
             type="text"
             data-testid="avocado-text-input"
             placeholder={placeholder}
+            disabled={disabled}
             id={id}
             value={value}
             onChange={onChange}
