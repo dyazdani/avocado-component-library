@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import AvocadoSelector from './AvocadoSelector';
+import React from 'react';
 
 const meta: Meta<typeof AvocadoSelector> = {
     title: 'AvocadoSelector',
@@ -11,12 +12,16 @@ type Story = StoryObj<typeof AvocadoSelector>;
 
 
 export const Primary: Story = {
+    render: () => <AvocadoSelector label="Avocado Selector" />
+}
+
+//TODO: Disabled story is not actually disabled because the disabled attribute is being set to a <div> not the input element itself
+export const Disabled: Story = {
+    render: () => <AvocadoSelector disabled={true} label="Avocado Selector" />
+}
+
+export const Playground: Story = {
     args: {
         label: "Add label text",
-        id: "avocado-selector",
-        name: "avocado-selector",
-        valueOne: "Option One",
-        valueTwo: "Option Two",
-        valueThree: "Option Three",
     }
 }
