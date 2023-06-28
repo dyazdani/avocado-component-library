@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import AvocadoRadioGroup from './AvocadoRadioGroup';
+import React from 'react';
 
 const meta: Meta<typeof AvocadoRadioGroup> = {
     title: 'AvocadoRadioGroup',
@@ -11,17 +12,15 @@ type Story = StoryObj<typeof AvocadoRadioGroup>;
 
 
 export const Primary: Story = {
+    render: () => <AvocadoRadioGroup legend="Avocado Radio Group" name="avocado-radio-group"/>
+}
+
+export const Disabled: Story = {
+    render: () => <AvocadoRadioGroup disabled={true} legend="Avocado Radio Group" name="avocado-radio-group"/>
+}
+
+export const Playground: Story = {
     args: {
-        name: "radio-group",
-        legend: "Legend text here",
-        idOne: "radio-group-item-one",
-        labelOne: "Label text here",
-        valueOne: "one",
-        idTwo: "radio-group-item-two",
-        labelTwo: "Label text here",
-        valueTwo: "two",
-        idThree: "radio-group-item-three",
-        labelThree: "Label text here",
-        valueThree: "three",
+        
     }
 }
