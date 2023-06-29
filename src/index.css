@@ -59,9 +59,9 @@ button[type="button"] {
   color: #a9d04e;
 }
 
-/* button[type="button"]:focus {
+button[type="button"]:focus {
   outline: 2px solid #a9d04e;
-} */
+}
 
 button[type="reset"] {
   background: #D7E9AA;
