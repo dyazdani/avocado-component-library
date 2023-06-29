@@ -6,7 +6,7 @@
 
 /****---BUTTON STYLES---****/
 
-button {
+.avocado-button {
   display: inline-block;
   font-family: inherit;
   font-weight: inherit;
@@ -26,44 +26,44 @@ button {
   -moz-appearance: none;
 }
 
-button:hover {
+.avocado-button:hover {
   background: #89c954;
 }
 
-button:focus {
+.avocado-button:focus {
   outline: 2px solid #74332c;
   outline-offset: 1px;
 }
 
-button.dark {
+.avocado-button.dark {
   border: none;
 }
 
-button.dark:focus {
+.avocado-button.dark:focus {
   outline: 2px solid #E1B7B7;
   outline-offset: 1px;
 }
 
-button:active {
+.avocado-button:active {
   transform: scale(0.99);
   background-color: #619B31;
 }
 
-button:disabled {
+.avocado-button:disabled {
   background-color: #423829; 
   color: #D9C9B4;
 }
 
-button[type="button"] {
+.avocado-button[type="button"] {
   background: #52261E;
   color: #a9d04e;
 }
 
-button[type="button"]:focus {
+.avocado-button[type="button"]:focus {
   outline: 2px solid #a9d04e;
 }
 
-button[type="reset"] {
+.avocado-button[type="reset"] {
   background: #D7E9AA;
   color: #74332C;
 }
