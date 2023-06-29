@@ -54,6 +54,20 @@ button:disabled {
   color: #D9C9B4;
 }
 
+button[type="button"] {
+  background: #52261E;
+  color: #a9d04e;
+}
+
+/* button[type="button"]:focus {
+  outline: 2px solid #a9d04e;
+} */
+
+button[type="reset"] {
+  background: #D7E9AA;
+  color: #74332C;
+}
+
 /****---LABEL STYLES---****/
 
 label {
