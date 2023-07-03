@@ -86,7 +86,7 @@
     "url": "https://github.com/dyazdani/avocado-component-library/issues"
   },
   "homepage": "https://github.com/dyazdani/avocado-component-library#readme",
-  "description": "",
+  "description": "A library of avocado-inspired, controlled components for React applications",
   "dependencies": {
     "@storybook/addon-a11y": "^7.0.20",
     "@testing-library/user-event": "^14.4.3",
