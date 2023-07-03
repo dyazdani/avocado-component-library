@@ -50,7 +50,7 @@ const AvocadoTextField = ({id, name, label, placeholder, value, onChange}: Avoca
           onChange={onChange}
           value={value}
         />
-        <AvocadoLabel id={id} label={label}/>
+        <AvocadoLabel htmlFor={id} label={label}/>
       </div>
   )
 };

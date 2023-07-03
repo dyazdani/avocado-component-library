@@ -18,5 +18,3 @@ const InputRadio = ({name, value}: AvocadoRadioGroupItemProps) => {
           />
         )
 };
-
-export default InputRadio;

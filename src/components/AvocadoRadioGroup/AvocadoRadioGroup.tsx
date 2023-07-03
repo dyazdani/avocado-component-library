@@ -1,26 +1,37 @@
-
-import React, { ReactNode } from "react";
-import AvocadoRadioGroupItem from "../AvocadoRadioGroupItem/AvocadoRadioGroupItem";
+import React from "react";
 import { useContext, PropsWithChildren } from "react";
 import { AvocadoThemeContext } from "../AvocadoThemeContext";
 
 export interface AvocadoRadioGroupProps {
   name: string
-  legend: string
+  legend?: string
+  id?: string
   disabled?: boolean
 }
 
-const AvocadoRadioGroup = ({name, legend, disabled, children}: PropsWithChildren<AvocadoRadioGroupProps>) => {
-    const theme = useContext(AvocadoThemeContext)
-//TODO: Throw an error if it receives a type that you do not want (i.e., not a radio group item)
-  return (
-      <fieldset data-testid="avocado-radio-group" disabled={disabled} className={`avocado-radio-group ${theme}`}>
-        <legend data-testid='radio-legend'>
-          {legend}
-        </legend>
-        {children}
-      </fieldset>
-  )
+const AvocadoRadioGroup = ({
+  name,
+  legend,
+  disabled,
+  children
+}: PropsWithChildren<AvocadoRadioGroupProps>) => {
+  const theme = useContext(AvocadoThemeContext)
+
+  const childrenWithName = React.Children.map(children, (child: React.ReactNode) => {
+    return React.cloneElement((child as React.ReactElement), {
+      name: name,
+    });
+  });
+  
+  return legend ? (
+    <fieldset data-testid="avocado-radio-group" className={`avocado-radio-group ${theme}`}>
+      <legend data-testid='radio-legend'>{legend}</legend>
+      {childrenWithName}
+    </fieldset>
+  ) : 
+    <fieldset data-testid="avocado-radio-group" className={`avocado-radio-group ${theme}`}>
+      {childrenWithName}
+    </fieldset>
 };
 
 export default AvocadoRadioGroup;

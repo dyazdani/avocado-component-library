@@ -46,7 +46,7 @@ const AvocadoCheckbox = ({label, id, name, disabled, checked, value, onChange}: 
           onChange={onChange}
           value={value}
         />
-        <AvocadoLabel id={id} label={label}/>
+        <AvocadoLabel htmlFor={id} label={label}/>
       </div>
   )
 };
