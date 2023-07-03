@@ -1,4 +1,4 @@
-# Avocado Component Library 🥑
+# 🥑 Avocado Component Library 🥑
 
 ## A React component library for web-based projects.
 
@@ -7,7 +7,7 @@ Controlled form components that you can use to create your very own Avocado-insp
 
 ### How to install
 npm
-```npm install avocado-component-library```
+```npm install @dyazdani/avocado-component-library@1.0.0```
 
 ### Use AvocadoThemeProvider to Provide Light and Dark Themes to Children Components
 Wrap your highest level component using Avocado components in the AvocadoThemeProvider in order to provide the light and dark theme to that component and all its children. 
