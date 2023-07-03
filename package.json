@@ -3,7 +3,6 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/dyazdani"
   },
-  "private": true,
   "version": "0.0.1",
   "type": "module",
   "scripts": {
