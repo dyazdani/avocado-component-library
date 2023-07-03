@@ -5,12 +5,12 @@ import { useContext } from "react";
 import { AvocadoThemeContext } from "../AvocadoThemeContext";
 
 export interface AvocadoRadioGroupItemProps {
-  id: string
-  name: string
-  label: string
-  value: string
-  checked: boolean
-  disabled: boolean
+  id?: string
+  name?: string
+  label?: string
+  value?: string
+  checked?: boolean
+  disabled?: boolean
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void
 
 }

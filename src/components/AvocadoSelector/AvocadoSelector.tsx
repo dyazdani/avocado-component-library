@@ -7,15 +7,16 @@ import { useContext } from "react";
 import { AvocadoThemeContext } from "../AvocadoThemeContext";
 
 export interface AvocadoSelectorProps {
-  id: string
-  name: string
-  label: string
-  valueOne: string
-  valueTwo: string
-  valueThree: string
+  id?: string
+  name?: string
+  label?: string
+  disabled?: boolean
+  valueOne?: string
+  valueTwo?: string
+  valueThree?: string
 }
 
-const AvocadoSelector = ({id, name, label, valueOne, valueTwo, valueThree}: AvocadoSelectorProps) => {
+const AvocadoSelector = ({id, name, label, disabled, valueOne, valueTwo, valueThree}: AvocadoSelectorProps) => {
   const theme = useContext(AvocadoThemeContext)
 
   return (
@@ -24,6 +25,7 @@ const AvocadoSelector = ({id, name, label, valueOne, valueTwo, valueThree}: Avoc
         <AvocadoSelect
           name={name}
           id={id}
+          disabled={disabled}
           valueOne={valueOne}
           valueTwo={valueTwo}
           valueThree={valueThree}

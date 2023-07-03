@@ -6,7 +6,7 @@
 
 /****---BUTTON STYLES---****/
 
-button {
+.avocado-button {
   display: inline-block;
   font-family: inherit;
   font-weight: inherit;
@@ -26,32 +26,46 @@ button {
   -moz-appearance: none;
 }
 
-button:hover {
+.avocado-button:hover {
   background: #89c954;
 }
 
-button:focus {
+.avocado-button:focus {
   outline: 2px solid #74332c;
   outline-offset: 1px;
 }
 
-button.dark {
+.avocado-button.dark {
   border: none;
 }
 
-button.dark:focus {
+.avocado-button.dark:focus {
   outline: 2px solid #E1B7B7;
   outline-offset: 1px;
 }
 
-button:active {
+.avocado-button:active {
   transform: scale(0.99);
   background-color: #619B31;
 }
 
-button:disabled {
+.avocado-button:disabled {
   background-color: #423829; 
   color: #D9C9B4;
+}
+
+.avocado-button[type="button"] {
+  background: #52261E;
+  color: #a9d04e;
+}
+
+.avocado-button[type="button"]:focus {
+  outline: 2px solid #a9d04e;
+}
+
+.avocado-button[type="reset"] {
+  background: #D7E9AA;
+  color: #74332C;
 }
 
 /****---LABEL STYLES---****/
@@ -171,6 +185,10 @@ label {
   outline-offset: 1px;
 }
 
+.avocado-color-picker:disabled {
+  background-color: #3a471c;
+}
+
 /****---DATE PICKER STYLES---****/
 
 .avocado-date-picker {
@@ -244,8 +262,11 @@ label {
 
 .avocado-input-radio.dark:focus,
 .avocado-input-radio.dark:checked:focus {
-  outline: 2px solid #E1B7B7;
-  
+  outline: 2px solid #E1B7B7; 
+}
+
+.avocado-input-radio:disabled {
+  background-color: #3a471c;
 }
 
 /****---RADIO GROUP STYLES---****/
@@ -303,6 +324,10 @@ label {
 
 .avocado-number-selector.beyond-min-max {
   background-color: #FFA8A8;
+  }
+
+  .avocado-number-selector:disabled {
+    background-color: #3a471c;
   }
 
 /****---SELECTOR STYLES---****/
@@ -377,6 +402,10 @@ label {
 .avocado-slider.dark:focus {
   outline: 2px solid #E1B7B7;
   outline-offset: 1px;
+}
+
+.avocado-slider:disabled{
+  background-color: #a9d04e;
 }
 
 /****---TEXT INPUT STYLES---****/

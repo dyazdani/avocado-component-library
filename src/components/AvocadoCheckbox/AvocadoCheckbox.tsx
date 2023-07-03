@@ -5,7 +5,7 @@ import { useContext } from "react";
 
 export interface AvocadoCheckboxProps {
   label?: string
-  id: string
+  id?: string
   name?: string
   disabled?: boolean
   checked?: boolean

@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import AvocadoCheckbox from './AvocadoCheckbox';
+import React from 'react';
 
 const meta: Meta<typeof AvocadoCheckbox> = {
     title: 'Components/AvocadoCheckbox',
@@ -12,32 +13,23 @@ type Story = StoryObj<typeof AvocadoCheckbox>;
 
 
 export const Primary: Story = {
-    name: "Default",
-    args: {
-        label: "Add label text",
-        id: "avocado-checkbox",
-        disabled: false,
-        name: "avocado-checkbox",
-        checked: false,
-    }
+    render: () => <AvocadoCheckbox label="Label text" />
+}
+
+export const Checked: Story = {
+    render: () => <AvocadoCheckbox checked={true} label="Label text" />
 }
 
 export const Disabled: Story = {
-    args: {
-        label: "Add label text",
-        id: "avocado-checkbox",
-        disabled: true,
-        name: "avocado-checkbox",
-        checked: false,
-    }
+    render: () => <AvocadoCheckbox disabled={true} label="Label text" />
 }
 
 export const DisabledAndChecked: Story = {
+    render: () => <AvocadoCheckbox disabled={true} checked={true} label="Label text" />
+}
+
+export const Playground: Story = {
     args: {
-        label: "Add label text",
-        id: "avocado-checkbox",
-        disabled: true,
-        name: "avocado-checkbox",
-        checked: true,
+        label: "Enter label text"
     }
 }

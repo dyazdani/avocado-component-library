@@ -9,6 +9,7 @@ interface AvocadoNumberSelectorProps {
   min?: string
   max?: string
   step?: string
+  disabled?: boolean
   placeholder?: string
   value?: string
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void
@@ -16,7 +17,7 @@ interface AvocadoNumberSelectorProps {
 }
 
 
-const AvocadoNumberSelector = ({name, id, min, max, step, placeholder, value, onChange}: AvocadoNumberSelectorProps) => {
+const AvocadoNumberSelector = ({name, id, min, max, step, disabled, placeholder, value, onChange}: AvocadoNumberSelectorProps) => {
   const theme = useContext(AvocadoThemeContext)
 
   const showError = !isWithinRange(min, max, value);
@@ -30,6 +31,7 @@ const AvocadoNumberSelector = ({name, id, min, max, step, placeholder, value, on
             min={min}
             max={max}
             step={step}
+            disabled={disabled}
             placeholder={placeholder}
             data-testid="avocado-number-selector"
             value={value}
