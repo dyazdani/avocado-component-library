@@ -2,8 +2,9 @@ import type { Meta, StoryObj } from '@storybook/react';
 import AvocadoSelector from './AvocadoSelector';
 
 const meta: Meta<typeof AvocadoSelector> = {
-    title: 'AvocadoSelector',
+    title: 'Components/AvocadoSelector',
     component: AvocadoSelector,
+    tags: ['autodocs'],
 }
                                              
 export default meta;
@@ -11,6 +12,7 @@ type Story = StoryObj<typeof AvocadoSelector>;
 
 
 export const Primary: Story = {
+    name: "Default",
     args: {
         label: "Add label text",
         id: "avocado-selector",
