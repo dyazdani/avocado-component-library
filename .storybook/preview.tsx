@@ -44,4 +44,9 @@ export const decorators = [
   },
 ];
 
+const { addDecorator } = require('@storybook/react');
+const { withPropsTable } = require('storybook-addon-react-docgen');
+
+addDecorator(withPropsTable);
+
 export default preview;
