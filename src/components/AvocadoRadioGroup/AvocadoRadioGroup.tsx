@@ -16,24 +16,21 @@ const AvocadoRadioGroup = ({
 }: PropsWithChildren<AvocadoRadioGroupProps>) => {
   const theme = useContext(AvocadoThemeContext)
 
-  const renderChildren = () => {
-    return React.Children.map(children, (child: React.ReactNode) => {
-      return React.cloneElement((child as React.ReactElement), {
-        name: name,
-        });
+  const childrenWithName = React.Children.map(children, (child: React.ReactNode) => {
+    return React.cloneElement((child as React.ReactElement), {
+      name: name,
     });
-  };
+  });
   
   return legend ? (
-      <fieldset data-testid="avocado-radio-group" className={`avocado-radio-group ${theme}`}>
-        <legend data-testid='radio-legend'>
-          {legend}
-        </legend>
-        {renderChildren()}
-      </fieldset>
-  ) : <fieldset data-testid="avocado-radio-group" className={`avocado-radio-group ${theme}`}>
-        {renderChildren()}
-      </fieldset>
+    <fieldset data-testid="avocado-radio-group" className={`avocado-radio-group ${theme}`}>
+      <legend data-testid='radio-legend'>{legend}</legend>
+      {childrenWithName}
+    </fieldset>
+  ) : 
+    <fieldset data-testid="avocado-radio-group" className={`avocado-radio-group ${theme}`}>
+      {childrenWithName}
+    </fieldset>
 };
 
 export default AvocadoRadioGroup;
