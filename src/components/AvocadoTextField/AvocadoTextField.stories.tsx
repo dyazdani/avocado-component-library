@@ -3,8 +3,9 @@ import AvocadoTextField from './AvocadoTextField';
 import React from 'react';
 
 const meta: Meta<typeof AvocadoTextField> = {
-    title: 'AvocadoTextField',
+    title: 'Components/AvocadoTextField',
     component: AvocadoTextField,
+    tags: ['autodocs'],
 }
                                              
 export default meta;

@@ -3,8 +3,9 @@ import AvocadoButton from './AvocadoButton';
 import React from 'react';
 
 const meta: Meta<typeof AvocadoButton> = {
-    title: 'AvocadoButton',
+    title: 'Components/AvocadoButton',
     component: AvocadoButton,
+    tags: ['autodocs'],
 }
 
 

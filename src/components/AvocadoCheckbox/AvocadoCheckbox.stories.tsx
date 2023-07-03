@@ -3,8 +3,9 @@ import AvocadoCheckbox from './AvocadoCheckbox';
 import React from 'react';
 
 const meta: Meta<typeof AvocadoCheckbox> = {
-    title: 'AvocadoCheckbox',
+    title: 'Components/AvocadoCheckbox',
     component: AvocadoCheckbox,
+    tags: ['autodocs'],
 }
 
 export default meta;

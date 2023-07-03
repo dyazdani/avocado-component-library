@@ -3,8 +3,9 @@ import AvocadoSelector from './AvocadoSelector';
 import React from 'react';
 
 const meta: Meta<typeof AvocadoSelector> = {
-    title: 'AvocadoSelector',
+    title: 'Components/AvocadoSelector',
     component: AvocadoSelector,
+    tags: ['autodocs'],
 }
                                              
 export default meta;

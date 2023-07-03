@@ -3,8 +3,9 @@ import AvocadoRadioGroup from './AvocadoRadioGroup';
 import React from 'react';
 
 const meta: Meta<typeof AvocadoRadioGroup> = {
-    title: 'AvocadoRadioGroup',
+    title: 'Components/AvocadoRadioGroup',
     component: AvocadoRadioGroup,
+    tags: ['autodocs'],
 }
                                              
 export default meta;

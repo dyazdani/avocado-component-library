@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from "react";
+import React, { FormEvent } from "react";
 import { useContext } from "react";
 import { AvocadoThemeContext } from "../AvocadoThemeContext";
 
@@ -9,7 +9,7 @@ export interface AvocadoButtonProps {
   disabled?: boolean
   value?: string
   buttonText?: string
-  onChange?: (e: ChangeEvent<HTMLInputElement>) => void
+  onClick?: (e: FormEvent<HTMLButtonElement>) => void 
 }
 
 const AvocadoButton = ({
@@ -18,7 +18,7 @@ const AvocadoButton = ({
   type, 
   disabled, 
   buttonText, 
-  onChange}: AvocadoButtonProps) => {
+  onClick}: AvocadoButtonProps) => {
   const theme = useContext(AvocadoThemeContext)
   return (
       <button
@@ -27,7 +27,7 @@ const AvocadoButton = ({
         name={name}
         type={type}
         disabled={disabled}
-        onChange={onChange}
+        onClick={onClick}
         data-testid="avocado-button"
       >{buttonText}</button>
   )

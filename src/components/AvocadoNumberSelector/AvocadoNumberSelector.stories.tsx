@@ -3,8 +3,9 @@ import AvocadoNumberSelector from './AvocadoNumberSelector';
 import React from 'react';
 
 const meta: Meta<typeof AvocadoNumberSelector> = {
-    title: 'AvocadoNumberSelector',
+    title: 'Components/AvocadoNumberSelector',
     component: AvocadoNumberSelector,
+    tags: ['autodocs'],
 }
 
 export default meta;
