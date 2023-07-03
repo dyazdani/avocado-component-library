@@ -4,12 +4,12 @@ import { AvocadoThemeContext } from "../AvocadoThemeContext";
 import { useContext } from "react";
 
 export interface AvocadoCheckboxProps {
-  label: string
+  label?: string
   id: string
-  name: string
+  name?: string
   disabled?: boolean
   checked?: boolean
-  value: string
+  value?: string
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void
 }
 

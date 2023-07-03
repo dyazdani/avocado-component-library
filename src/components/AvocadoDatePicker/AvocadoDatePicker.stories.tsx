@@ -13,9 +13,7 @@ type Story = StoryObj<typeof AvocadoDatePicker>;
 export const Primary: Story = {
     args: {
         name: "avocado-date-picker",
-        min: "",
-        max: "",
         required: false,
-        step: 1,
+        step: '1',
     }
 }

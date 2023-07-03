@@ -4,13 +4,13 @@ import { AvocadoThemeContext } from "../AvocadoThemeContext";
 import isWithinRange from "../../utilities";
 
 interface AvocadoNumberSelectorProps {
-  name: string
+  name?: string
   id?: string
   min?: string
   max?: string
   step?: string
   placeholder?: string
-  value: string
+  value?: string
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void
   // onChange: (value: string) => void
 }

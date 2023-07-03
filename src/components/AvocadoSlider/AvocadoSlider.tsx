@@ -3,12 +3,12 @@ import { useContext } from "react";
 import { AvocadoThemeContext } from "../AvocadoThemeContext";
 
 export interface AvocadoSliderProps {
-  id: string
-  name: string
-  min: number
-  max: number
-  step: number
-  value: string
+  id?: string
+  name?: string
+  min?: number
+  max?: number
+  step?: number
+  value?: string
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void
 }
 
