@@ -17,7 +17,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "storybook-docs": "storybook dev --docs",
-    "build-storybook-docs": "storybook build --docs"
+    "build-storybook-docs": "storybook build --docs",
+    "chromatic": "npx chromatic --project-token=chpt_8e3d234d45fd220"
   },
   "devDependencies": {
     "@babel/core": "^7.21.8",
@@ -84,7 +85,9 @@
     "type": "git",
     "url": "git+https://github.com/dyazdani/avocado-component-library.git"
   },
-  "author": "dyazdani",
+  "author": {
+    "name": "dyazdani"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/dyazdani/avocado-component-library/issues"
